@@ -446,7 +446,7 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
     <nav aria-label="Main">
       <ul>
         <li><a href="#book">The Book</a></li>
-        <li><a href="#exercise-pack">Exercise Pack</a></li>
+        <li><a href="#exercise-pack">Free printables</a></li>
         <li><a href="#workshop">Workshop</a></li>
         <li><a href="#coaching">Coaching</a></li>
         <li><a href="#speaking">Speaking</a></li>
@@ -457,6 +457,7 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
   </div>
 </header>
 
+<div style="background:#e8743b;color:#151515;font-size:14px;font-weight:600;text-align:center;padding:9px 16px">Reading The Invisible Loop? <a href="#exercise-pack" style="color:#151515">Get the free printable diagnostic and worksheets →</a></div>
 <main id="top">
 
 <!-- 1. HERO -->
@@ -509,7 +510,7 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
         <p>If you feel like you are running twice as fast and ending up in the same place, you are not failing. Before you try another strategy, see exactly where the loop is holding you back.</p>
         <div class="go">
           <a class="btn btn-gold" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Start the diagnostic <span class="arrow" aria-hidden="true">→</span></a>
-          <span class="micro">Answer for the past month. Go fast.</span>
+          <a class="textlink" href="#exercise-pack" style="color:var(--silver)">Prefer paper? Print it</a>
         </div>
       </div>
       <ul aria-label="In eight minutes, you will see">
@@ -584,10 +585,11 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
 <section class="section pack" id="exercise-pack">
   <div class="wrap pack-grid">
     <div>
-      <div class="eyebrow">Free with the book</div>
-      <h2 class="h2" style="margin:14px 0 16px">The Exercise Pack</h2>
-      <p class="lead" style="color:#4f586b">Every chapter ends with a worksheet. Download them as printable PDFs, all eight at once or only the chapters you are working on. Free for every reader, wherever you bought the book.</p>
-      <ul class="chlist" aria-label="Worksheets">
+      <div class="eyebrow">Free for readers of the book</div>
+      <h2 class="h2" style="margin:14px 0 16px">Printable diagnostic and worksheets</h2>
+      <p class="lead" style="color:#4f586b">Print the diagnostic to score your loop on paper, and the worksheet that ends every chapter. Download all eight worksheets at once or only the chapters you are working on. Free for every reader, wherever you bought the book.</p>
+      <ul class="chlist" aria-label="Free printables">
+        <li><b>Start</b><div>The Invisible Loop Diagnostic<span>32 statements, scoring table and score bands</span></div></li>
         <li><b>Ch 1</b><div>The Spiral Interrupt</div></li>
         <li><b>Ch 2</b><div>The Hidden Cost Check</div></li>
         <li><b>Ch 3</b><div>Your Identity Wardrobe</div></li>
@@ -599,8 +601,8 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
       </ul>
     </div>
     <div class="formcard">
-      <h3>Get your worksheets</h3>
-      <p>Tell me where you got the book and the downloads open straight away.</p>
+      <h3>Get your free printables</h3>
+      <p>Enter your email and the downloads open straight away.</p>
       <form id="pack-form" novalidate>
         <div class="field"><label for="pk-name">Name</label><input id="pk-name" name="name" autocomplete="name" required></div>
         <div class="field"><label for="pk-email">Email</label><input id="pk-email" name="email" type="email" autocomplete="email" required></div>
@@ -609,7 +611,7 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
             <option>Bought it on this website</option><option>Amazon</option><option>Another online store</option><option>A bookshop</option><option>It was a gift</option>
           </select>
         </div>
-        <div class="field"><label for="pk-order">Order number <span style="font-weight:400;color:var(--muted)">(optional)</span></label><input id="pk-order" name="order"></div>
+        <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:4px 0 16px;cursor:pointer"><input type="checkbox" name="optin" style="margin-top:4px;accent-color:var(--navy)"> Send me occasional emails about the book, workshops and new tools. Unsubscribe any time.</label>
         <button class="btn btn-navy" style="width:100%" type="submit">Show my downloads <span class="arrow" aria-hidden="true">→</span></button>
       </form>
       <div class="dl" id="pack-dl" aria-live="polite"></div>
@@ -763,7 +765,7 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
     <img src="assets/logo.png" alt="Inner Channel">
     <p style="max-width:46ch">© 2026 Inner Channel Pte Ltd, Singapore. The diagnostic, book and worksheets are tools for self-reflection, not medical or psychological advice. If things feel too heavy, please speak with a doctor, a counsellor or someone you trust.</p>
     <nav aria-label="Offers"><b>Start</b>
-      <a href="https://loop.limpeifang.com/" target="_blank" rel="noopener">The Diagnostic</a><a href="#book">The Book</a><a href="#exercise-pack">Free Exercise Pack</a><a href="#workshop">Workshop</a><a href="#coaching">Discovery call</a>
+      <a href="https://loop.limpeifang.com/" target="_blank" rel="noopener">The Diagnostic</a><a href="#book">The Book</a><a href="#exercise-pack">Free printables</a><a href="#workshop">Workshop</a><a href="#coaching">Discovery call</a>
     </nav>
     <nav aria-label="More"><b>More</b>
       <a href="#speaking">Speaking</a><a href="#about">About</a><a href="https://www.linkedin.com/in/lim-peifang" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:pf@limpeifang.com">pf@limpeifang.com</a>
@@ -824,7 +826,7 @@ const CONFIG = {
     ebook_session:"", paperback_session:"", audiobook_session:""
   },
   // Exercise Pack PDF links: one file with all 8, plus one per chapter.
-  packLinks: { all:"downloads/The-Invisible-Loop-Exercise-Pack-All-8.pdf",
+  packLinks: { diag:"downloads/The-Invisible-Loop-Diagnostic-Printable.pdf", all:"downloads/The-Invisible-Loop-Exercise-Pack-All-8.pdf",
     ch1:"downloads/Ch1-spiral-interrupt.pdf", ch2:"downloads/Ch2-hidden-cost-check.pdf", ch3:"downloads/Ch3-identity-wardrobe.pdf",
     ch4:"downloads/Ch4-confront-journal.pdf", ch5:"downloads/Ch5-let-go-ledger.pdf", ch6:"downloads/Ch6-enlist-card.pdf",
     ch7:"downloads/Ch7-loop-tracker.pdf", ch8:"downloads/Ch8-rise-plan.pdf" },
@@ -912,10 +914,10 @@ $("#pack-form").addEventListener("submit",async e=>{
   e.preventDefault();const el=e.target.elements,dl=$("#pack-dl");
   const name=el["name"].value.trim(),em=el["email"].value.trim();
   if(!name||!validEmail(em)){dl.innerHTML=`<div class="soon">Please add your name and a valid email.</div>`;dl.classList.add("show");return}
-  sendLead("pack_claim",{name,email:em,where:el["where"].value,order:el["order"].value});
+  sendLead("pack_claim",{name,email:em,where:el["where"].value,optin:el["optin"].checked?"yes":"no"});
   const L=CONFIG.packLinks;
   const row=(id,label,cls="")=>L[id]?`<a class="${cls}" href="${L[id]}" target="_blank" rel="noopener">${label}<span>PDF ↓</span></a>`:`<div class="soon">${label}<span>At launch</span></div>`;
-  dl.innerHTML=`<p style="font-size:15px;margin-bottom:4px">Thank you, ${name}. Download all eight, or only the chapters you need.</p>`+row("all","All 8 worksheets","all")+SHEETS.map(([id,t])=>row(id,t)).join("");
+  dl.innerHTML=`<p style="font-size:15px;margin-bottom:4px">Thank you, ${name}. Here are your printables.</p>`+row("diag","The Invisible Loop Diagnostic (printable)","all")+row("all","All 8 worksheets in one file","all")+`<p style="font-size:13px;color:var(--muted);margin:8px 0 2px">Or one chapter at a time</p>`+SHEETS.map(([id,t])=>row(id,t)).join("");
   e.target.hidden=true;dl.classList.add("show");
 });
 
