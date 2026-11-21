@@ -433,6 +433,29 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
 
 .speak .gallery2{margin-bottom:0}
 .about3 .links{display:flex;gap:22px;margin-top:28px;flex-wrap:wrap}
+
+/* v6 */
+.book-opts{display:grid;gap:12px;margin-top:6px}
+.book-opt{display:grid;grid-template-columns:48px 1fr auto;gap:14px;align-items:center;padding:18px 18px;border:1px solid #c9ccd3;background:#fff;text-decoration:none;color:var(--ink);border-radius:2px;transition:border-color .15s,box-shadow .15s}
+.book-opt:hover{border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy)}
+.book-opt .ic{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-size:22px;color:#fff}
+.book-opt b{display:block;font-size:17px}
+.book-opt small{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+.book-opt .go{font-weight:700;color:var(--muted)}
+.printdiag{background:#fff}
+.newsletter{background:var(--navy-2);color:var(--silver)}
+.nl-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.nl-grid .lead{color:var(--muted-dark)}
+.nl-form{display:grid;gap:12px}
+.nl-form .row{display:flex;gap:10px;flex-wrap:wrap}
+.nl-form input[type=text],.nl-form input[type=email]{flex:1 1 200px;font:16px var(--body);padding:14px;border:1px solid var(--line-dark);background:#0d1424;color:#fff;border-radius:2px}
+.nl-form input::placeholder{color:#7d8699}
+.nl-form label{font-size:13.5px;color:var(--muted-dark);display:flex;gap:8px;align-items:flex-start}
+.nl-done{display:none;padding:14px 16px;background:#15301f;border-left:3px solid #6fbf73;color:#dff0df;font-size:15px}
+.nl-done.show{display:block}
+.gallery-wide{margin:0 0 12px;height:300px;overflow:hidden;max-width:760px}
+.gallery-wide img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+@media (max-width:860px){.nl-grid{grid-template-columns:1fr;gap:28px}.gallery-wide{height:200px}}
 </style>
 </head>
 <body>
@@ -446,18 +469,19 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
     <nav aria-label="Main">
       <ul>
         <li><a href="#book">The Book</a></li>
-        <li><a href="#exercise-pack">Free printables</a></li>
+        <li><a href="#exercise-pack">Worksheets</a></li>
         <li><a href="#workshop">Workshop</a></li>
         <li><a href="#coaching">Coaching</a></li>
         <li><a href="#speaking">Speaking</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
       </ul>
     </nav>
-    <a class="btn btn-gold" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Take the diagnostic</a>
+    <button class="btn btn-gold" data-book>Book a free call</button>
   </div>
 </header>
 
-<div style="background:#e8743b;color:#151515;font-size:14px;font-weight:600;text-align:center;padding:9px 16px">Reading The Invisible Loop? <a href="#exercise-pack" style="color:#151515">Get the free printable diagnostic and worksheets →</a></div>
+<div style="background:#e8743b;color:#151515;font-size:14px;font-weight:600;text-align:center;padding:9px 16px">Reading The Invisible Loop? Free for readers: <a href="#printable-diagnostic" style="color:#151515">printable diagnostic</a> · <a href="#exercise-pack" style="color:#151515">chapter worksheets</a></div>
 <main id="top">
 
 <!-- 1. HERO -->
@@ -470,10 +494,10 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
         <p class="hook">Success does not break the loop. It raises the price.</p>
         <p class="lede">Most high achievers do not plateau because they lack discipline, drive or strategy. They plateau because an old pattern tied to their identity pulls them back, however hard they push.</p>
         <div class="ctas">
-          <a class="btn btn-gold btn-lg" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Take the free diagnostic <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-line" href="#book">Get the book</a>
+          <button class="btn btn-gold btn-lg" data-book>Book a free call <span class="arrow" aria-hidden="true">→</span></button>
+          <a class="btn btn-line" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Take the free diagnostic</a>
         </div>
-        <p class="micro meta">Free · about 8 minutes</p>
+        <p class="micro meta">Free 30-minute discovery call · or <a href="#book" style="color:var(--gold-soft)">get the book</a></p>
       </div>
       <figure class="hero-cover">
         <img src="assets/cover.jpg" alt="Cover of The Invisible Loop by Lim Pei Fang">
@@ -510,7 +534,7 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
         <p>If you feel like you are running twice as fast and ending up in the same place, you are not failing. Before you try another strategy, see exactly where the loop is holding you back.</p>
         <div class="go">
           <a class="btn btn-gold" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Start the diagnostic <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="textlink" href="#exercise-pack" style="color:var(--silver)">Prefer paper? Print it</a>
+          <a class="textlink" href="#printable-diagnostic" style="color:var(--silver)">Prefer paper? Print it</a>
         </div>
       </div>
       <ul aria-label="In eight minutes, you will see">
@@ -519,6 +543,33 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
         <li><span>3</span>What it is costing you, in time, money and the people around you</li>
         <li><span>4</span>Three ways to start breaking your loop this week</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 2b. PRINTABLE DIAGNOSTIC -->
+<section class="section printdiag" id="printable-diagnostic">
+  <div class="wrap pack-grid">
+    <div>
+      <div class="eyebrow">Free printable</div>
+      <h2 class="h2" style="margin:14px 0 16px">The diagnostic, on paper</h2>
+      <p class="lead">Prefer a pen to a screen? Print the full Invisible Loop Diagnostic and score it by hand. Keep it close. You will come back to it all through the book.</p>
+      <ul class="chlist" aria-label="What is in the printable diagnostic">
+        <li><b>32</b><div>Short statements, each rated 0 to 3 for the past month</div></li>
+        <li><b>4</b><div>Parts of the loop, each scored out of 24 on the scoring table</div></li>
+        <li><b>3</b><div>Score bands, so you can see which parts are quiet, active or strong</div></li>
+      </ul>
+    </div>
+    <div class="formcard">
+      <h3>Get the printable diagnostic</h3>
+      <p>Enter your email and the download opens straight away.</p>
+      <form id="dg-form" novalidate>
+        <div class="field"><label for="dg-name">Name</label><input id="dg-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="dg-email">Email</label><input id="dg-email" name="email" type="email" autocomplete="email" required></div>
+        <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:4px 0 16px;cursor:pointer"><input type="checkbox" name="optin" style="margin-top:4px;accent-color:var(--navy)"> Send me the newsletter, with occasional news on the book and workshops. Unsubscribe any time.</label>
+        <button class="btn btn-navy" style="width:100%" type="submit">Download the diagnostic <span class="arrow" aria-hidden="true">→</span></button>
+      </form>
+      <div class="dl" id="dg-dl" aria-live="polite"></div>
     </div>
   </div>
 </section>
@@ -586,11 +637,10 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
   <div class="wrap pack-grid">
     <div>
       <div class="eyebrow">Free for readers of the book</div>
-      <h2 class="h2" style="margin:14px 0 16px">Printable diagnostic and worksheets</h2>
-      <p class="lead" style="color:#4f586b">Print the diagnostic to score your loop on paper, and the worksheet that ends every chapter. Download all eight worksheets at once or only the chapters you are working on. Free for every reader, wherever you bought the book.</p>
-      <ul class="chlist" aria-label="Free printables">
-        <li><b>Start</b><div>The Invisible Loop Diagnostic<span>32 statements, scoring table and score bands</span></div></li>
-        <li><b>Ch 1</b><div>The Spiral Interrupt</div></li>
+      <h2 class="h2" style="margin:14px 0 16px">Chapter worksheets</h2>
+      <p class="lead" style="color:#4f586b">Every chapter ends with a worksheet. Download them as printable PDFs, all eight at once or only the chapters you are working on. Free for every reader, wherever you bought the book.</p>
+      <ul class="chlist" aria-label="Chapter worksheets">
+        <li><b>Ch 1</b><div>Your Loop, Facts or Story?</div></li>
         <li><b>Ch 2</b><div>The Hidden Cost Check</div></li>
         <li><b>Ch 3</b><div>Your Identity Wardrobe</div></li>
         <li><b>Ch 4</b><div>The Confront Journal</div></li>
@@ -601,7 +651,7 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
       </ul>
     </div>
     <div class="formcard">
-      <h3>Get your free printables</h3>
+      <h3>Get your free worksheets</h3>
       <p>Enter your email and the downloads open straight away.</p>
       <form id="pack-form" novalidate>
         <div class="field"><label for="pk-name">Name</label><input id="pk-name" name="name" autocomplete="name" required></div>
@@ -611,7 +661,7 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
             <option>Bought it on this website</option><option>Amazon</option><option>Another online store</option><option>A bookshop</option><option>It was a gift</option>
           </select>
         </div>
-        <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:4px 0 16px;cursor:pointer"><input type="checkbox" name="optin" style="margin-top:4px;accent-color:var(--navy)"> Send me occasional emails about the book, workshops and new tools. Unsubscribe any time.</label>
+        <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:4px 0 16px;cursor:pointer"><input type="checkbox" name="optin" style="margin-top:4px;accent-color:var(--navy)"> Send me the newsletter, with occasional news on the book and workshops. Unsubscribe any time.</label>
         <button class="btn btn-navy" style="width:100%" type="submit">Show my downloads <span class="arrow" aria-hidden="true">→</span></button>
       </form>
       <div class="dl" id="pack-dl" aria-live="polite"></div>
@@ -682,8 +732,7 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
       <span class="eyebrow">Free · No obligation</span>
       <h3>Book a discovery call</h3>
       <p>A conversation, not a sales pitch. I know the pressure you work under, because I lived inside it before I ever called myself a coach.</p>
-      <a class="btn btn-gold" id="book-btn" href="#coaching">Choose a time <span class="arrow" aria-hidden="true">→</span></a>
-      <div class="pending" id="book-pending" role="status">Online booking opens shortly. Message me on <a href="https://www.linkedin.com/in/lim-peifang" target="_blank" rel="noopener">LinkedIn</a> with the word “CALL” and I will send you a time.</div>
+      <button class="btn btn-gold" data-book>Book a free call <span class="arrow" aria-hidden="true">→</span></button>
       <p class="tip">Bring your diagnostic result. It makes the call sharper. <a href="https://loop.limpeifang.com/" target="_blank" rel="noopener" style="color:var(--gold-soft)">Take it now</a></p>
     </aside>
   </div>
@@ -698,9 +747,12 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
       <p class="lead">For conferences, leadership programmes, and HR and learning and development teams supporting people through restructuring or a step up.</p>
     </div>
     <div class="speak">
+      <div>
+      <figure class="gallery-wide"><img src="assets/speak-room.jpg" alt="Pei Fang speaking to a full room at the Centre for Inner Studies, Singapore" loading="lazy"></figure>
       <div class="gallery2">
         <figure><img src="assets/speak-1.jpg" alt="Pei Fang speaking on stage" loading="lazy"></figure>
         <figure><img src="assets/speak-3.jpg" alt="Pei Fang leading an audience exercise" loading="lazy"></figure>
+      </div>
       </div>
       <div>
         <ul class="topics" aria-label="Talks">
@@ -746,15 +798,34 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
 
 <!-- TESTIMONIALS: add here once client quotes are approved -->
 
+<section class="section newsletter" id="newsletter">
+  <div class="wrap nl-grid">
+    <div>
+      <div class="eyebrow">Newsletter</div>
+      <h2 class="h2" style="color:#fff;margin:14px 0 16px">Notes on breaking the loop</h2>
+      <p class="lead">Short, practical notes on the patterns that hold capable people back, in the same spirit as my LinkedIn posts. Plus first news of the book, workshops and new tools.</p>
+      <p style="margin-top:18px"><a class="textlink" href="https://www.linkedin.com/in/lim-peifang" target="_blank" rel="noopener" style="color:var(--gold-soft)">Prefer LinkedIn? Follow me there</a></p>
+    </div>
+    <div>
+      <form class="nl-form" id="nl-form" novalidate>
+        <div class="row"><input type="text" name="name" placeholder="First name" aria-label="First name" autocomplete="given-name"><input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email" required></div>
+        <button class="btn btn-gold" type="submit">Subscribe <span class="arrow" aria-hidden="true">→</span></button>
+        <span class="micro" style="color:var(--muted-dark)">No spam. Unsubscribe any time.</span>
+      </form>
+      <div class="nl-done" id="nl-done" role="status"></div>
+    </div>
+  </div>
+</section>
+
 <section class="final">
   <div class="wrap final-grid">
     <div>
       <h2>The same problem will find you in the next role. Unless you change what is making the decision.</h2>
-      <p>Start by seeing it. Eight minutes, free.</p>
+      <p>Start with a free 30-minute call, or see your loop in eight minutes with the diagnostic.</p>
     </div>
     <div class="ctas">
-      <a class="btn btn-gold btn-lg" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Take the free diagnostic <span class="arrow" aria-hidden="true">→</span></a>
-      <a class="btn btn-line" href="#book">Get the book</a>
+      <button class="btn btn-gold btn-lg" data-book>Book a free call <span class="arrow" aria-hidden="true">→</span></button>
+      <a class="btn btn-line" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Take the free diagnostic</a>
     </div>
   </div>
 </section>
@@ -765,7 +836,7 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
     <img src="assets/logo.png" alt="Inner Channel">
     <p style="max-width:46ch">© 2026 Inner Channel Pte Ltd, Singapore. The diagnostic, book and worksheets are tools for self-reflection, not medical or psychological advice. If things feel too heavy, please speak with a doctor, a counsellor or someone you trust.</p>
     <nav aria-label="Offers"><b>Start</b>
-      <a href="https://loop.limpeifang.com/" target="_blank" rel="noopener">The Diagnostic</a><a href="#book">The Book</a><a href="#exercise-pack">Free printables</a><a href="#workshop">Workshop</a><a href="#coaching">Discovery call</a>
+      <a href="https://loop.limpeifang.com/" target="_blank" rel="noopener">The Diagnostic</a><a href="#book">The Book</a><a href="#printable-diagnostic">Printable diagnostic</a><a href="#exercise-pack">Chapter worksheets</a><a href="#workshop">Workshop</a><a href="#coaching">Discovery call</a><a href="#newsletter">Newsletter</a>
     </nav>
     <nav aria-label="More"><b>More</b>
       <a href="#speaking">Speaking</a><a href="#about">About</a><a href="https://www.linkedin.com/in/lim-peifang" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:pf@limpeifang.com">pf@limpeifang.com</a>
@@ -773,7 +844,22 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
   </div>
 </footer>
 
-<div class="mbar" id="mbar"><a class="btn btn-gold" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Take the free diagnostic →</a></div>
+<div class="mbar" id="mbar"><button class="btn btn-gold" data-book>Book a free call →</button></div>
+
+<!-- BOOK A CALL CHOOSER -->
+<div class="overlay" id="booker" role="dialog" aria-modal="true" aria-labelledby="bk-title">
+  <div class="sheet" style="max-width:520px">
+    <div class="sheet-head"><b id="bk-title">Book a free call</b><button class="x" data-close aria-label="Close">×</button></div>
+    <div class="sheet-body">
+      <p style="color:var(--muted);margin-bottom:16px">A 30-minute discovery call. A conversation, not a sales pitch. Choose how you would like to book.</p>
+      <div class="book-opts">
+        <a class="book-opt" id="bk-cal" href="https://calendly.com/pf-limpeifang/30min" target="_blank" rel="noopener"><span class="ic" style="background:#006bff">📅</span><span><b>Pick a time on Calendly</b><small>See my free slots and book instantly</small></span><span class="go">→</span></a>
+        <a class="book-opt" id="bk-wa" href="#" target="_blank" rel="noopener"><span class="ic" style="background:#25d366">💬</span><span><b>Message me on WhatsApp</b><small>Ask a question first, or arrange a time</small></span><span class="go">→</span></a>
+      </div>
+      <p class="micro" style="margin-top:16px">Bring your diagnostic result if you have one. It makes the call sharper.</p>
+    </div>
+  </div>
+</div>
 
 <!-- CHECKOUT OVERLAY -->
 <div class="overlay" id="checkout" role="dialog" aria-modal="true" aria-labelledby="co-title">
@@ -827,18 +913,21 @@ const CONFIG = {
   },
   // Exercise Pack PDF links: one file with all 8, plus one per chapter.
   packLinks: { diag:"downloads/The-Invisible-Loop-Diagnostic-Printable.pdf", all:"downloads/The-Invisible-Loop-Exercise-Pack-All-8.pdf",
-    ch1:"downloads/Ch1-spiral-interrupt.pdf", ch2:"downloads/Ch2-hidden-cost-check.pdf", ch3:"downloads/Ch3-identity-wardrobe.pdf",
+    ch1:"downloads/Ch1-facts-or-story.pdf", ch2:"downloads/Ch2-hidden-cost-check.pdf", ch3:"downloads/Ch3-identity-wardrobe.pdf",
     ch4:"downloads/Ch4-confront-journal.pdf", ch5:"downloads/Ch5-let-go-ledger.pdf", ch6:"downloads/Ch6-enlist-card.pdf",
     ch7:"downloads/Ch7-loop-tracker.pdf", ch8:"downloads/Ch8-rise-plan.pdf" },
   // Calendly link for the discovery call, e.g. https://calendly.com/yourname/discovery-call
   bookingUrl: "https://calendly.com/pf-limpeifang/30min",
   // Form backend (Formspree) for the workshop list, pack claims, pre-orders, saved results.
   formEndpoint: "https://script.google.com/macros/s/AKfycbyMKwZd1xij3aPPwTUJq3Ac-CG9dFwenGZj0JLXcTfA4g3r-z42cmcNyIFfMkupIF5Y/exec",
-  linkedin: "https://www.linkedin.com/in/lim-peifang"
+  linkedin: "https://www.linkedin.com/in/lim-peifang",
+  // WhatsApp number in international format, digits only, e.g. "6591234567". Leave "" to hide the WhatsApp option.
+  whatsapp: "",
+  whatsappText: "Hi Pei Fang, I found you through your website and would like to book a discovery call."
 };
 /* ========================================================= */
 
-const SHEETS=[["ch1","Ch 1 · The Spiral Interrupt"],["ch2","Ch 2 · The Hidden Cost Check"],["ch3","Ch 3 · Your Identity Wardrobe"],["ch4","Ch 4 · The Confront Journal"],["ch5","Ch 5 · The Let Go Ledger"],["ch6","Ch 6 · The Enlist Card"],["ch7","Ch 7 · The Loop Tracker"],["ch8","Ch 8 · Your Rise Plan"]];
+const SHEETS=[["ch1","Ch 1 · Your Loop, Facts or Story?"],["ch2","Ch 2 · The Hidden Cost Check"],["ch3","Ch 3 · Your Identity Wardrobe"],["ch4","Ch 4 · The Confront Journal"],["ch5","Ch 5 · The Let Go Ledger"],["ch6","Ch 6 · The Enlist Card"],["ch7","Ch 7 · The Loop Tracker"],["ch8","Ch 8 · Your Rise Plan"]];
 const FMT={ebook:"eBook",paperback:"Paperback",audiobook:"Audiobook"};
 
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
@@ -917,7 +1006,7 @@ $("#pack-form").addEventListener("submit",async e=>{
   sendLead("pack_claim",{name,email:em,where:el["where"].value,optin:el["optin"].checked?"yes":"no"});
   const L=CONFIG.packLinks;
   const row=(id,label,cls="")=>L[id]?`<a class="${cls}" href="${L[id]}" target="_blank" rel="noopener">${label}<span>PDF ↓</span></a>`:`<div class="soon">${label}<span>At launch</span></div>`;
-  dl.innerHTML=`<p style="font-size:15px;margin-bottom:4px">Thank you, ${name}. Here are your printables.</p>`+row("diag","The Invisible Loop Diagnostic (printable)","all")+row("all","All 8 worksheets in one file","all")+`<p style="font-size:13px;color:var(--muted);margin:8px 0 2px">Or one chapter at a time</p>`+SHEETS.map(([id,t])=>row(id,t)).join("");
+  dl.innerHTML=`<p style="font-size:15px;margin-bottom:4px">Thank you, ${name}. Here are your worksheets.</p>`+row("all","All 8 worksheets in one file","all")+`<p style="font-size:13px;color:var(--muted);margin:8px 0 2px">Or one chapter at a time</p>`+SHEETS.map(([id,t])=>row(id,t)).join("");
   e.target.hidden=true;dl.classList.add("show");
 });
 
@@ -933,10 +1022,30 @@ $("#ws-form").addEventListener("submit",async e=>{
 });
 
 /* ---------- booking + mobile bar ---------- */
-(function(){const b=$("#book-btn"),p=$("#book-pending");
-  if(CONFIG.bookingUrl){b.href=CONFIG.bookingUrl;b.target="_blank";b.rel="noopener"}
-  else b.addEventListener("click",e=>{e.preventDefault();p.classList.add("show")});
+(function(){
+  const cal=$("#bk-cal"),wa=$("#bk-wa");
+  if(CONFIG.bookingUrl)cal.href=CONFIG.bookingUrl;
+  if(CONFIG.whatsapp){wa.href="https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(CONFIG.whatsappText)}else{wa.hidden=true}
+  $$("[data-book]").forEach(b=>b.addEventListener("click",()=>openOv("booker")));
+  [cal,wa].forEach(a=>a.addEventListener("click",()=>sendLead("book_click",{via:a===cal?"calendly":"whatsapp"})));
 })();
+/* printable diagnostic */
+$("#dg-form").addEventListener("submit",e=>{
+  e.preventDefault();const el=e.target.elements,dl=$("#dg-dl");
+  const name=el["name"].value.trim(),em=el["email"].value.trim();
+  if(!name||!validEmail(em)){dl.innerHTML=`<div class="soon">Please add your name and a valid email.</div>`;dl.classList.add("show");return}
+  sendLead("diagnostic_printable",{name,email:em,optin:el["optin"].checked?"yes":"no"});
+  dl.innerHTML=`<p style="font-size:15px;margin-bottom:4px">Thank you, ${name}. Here is your diagnostic.</p><a class="all" href="${CONFIG.packLinks.diag}" target="_blank" rel="noopener">The Invisible Loop Diagnostic (printable)<span>PDF ↓</span></a><p style="font-size:13.5px;color:var(--muted);margin-top:8px">Prefer it scored for you? <a href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Take it online</a>.</p>`;
+  e.target.hidden=true;dl.classList.add("show");
+});
+/* newsletter */
+$("#nl-form").addEventListener("submit",async e=>{
+  e.preventDefault();const el=e.target.elements,d=$("#nl-done");
+  const em=el["email"].value.trim(),name=el["name"].value.trim();
+  if(!validEmail(em)){d.textContent="Please enter a valid email.";d.classList.add("show");return}
+  await sendLead("newsletter",{name,email:em,optin:"yes"});
+  e.target.hidden=true;d.textContent=`Thank you${name?", "+name:""}. You are subscribed.`;d.classList.add("show");
+});
 (function(){const bar=$("#mbar"),hero=$(".hero");
   if(!("IntersectionObserver" in window))return;
   new IntersectionObserver(([en])=>bar.classList.toggle("show",!en.isIntersecting),{threshold:0}).observe(hero);
