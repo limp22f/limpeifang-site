@@ -456,6 +456,20 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
 .gallery-wide{margin:0 0 12px;height:300px;overflow:hidden;max-width:760px}
 .gallery-wide img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
 @media (max-width:860px){.nl-grid{grid-template-columns:1fr;gap:28px}.gallery-wide{height:200px}}
+
+/* v7 */
+.offers2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:56px;max-width:760px}
+.freepack{margin-top:16px;max-width:760px;font-size:14.5px;color:#d3cfc6;display:flex;gap:10px;align-items:center}
+.freepack::before{content:"+";font-weight:800;color:var(--ember);font-size:18px}
+.mini{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:18px 22px;margin-top:28px;border:1px solid var(--line-dark);max-width:760px}
+.mini b{display:block;font-size:16px;color:#fff}
+.mini span{font-size:14px;color:var(--muted-dark)}
+.book .mini{border-color:#2e2e2e}
+.book .mini b{color:#f4f1ea}
+.mini .btn{padding:11px 18px;font-size:14px}
+.chpick{display:grid;gap:6px;margin-top:4px}
+.coach1{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start}
+@media (max-width:860px){.offers2{grid-template-columns:1fr}.coach1{grid-template-columns:1fr;gap:36px}}
 </style>
 </head>
 <body>
@@ -468,20 +482,20 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
     </a>
     <nav aria-label="Main">
       <ul>
+        <li><a href="#diagnostic">Diagnostic</a></li>
         <li><a href="#book">The Book</a></li>
-        <li><a href="#exercise-pack">Worksheets</a></li>
+        <li><a href="#speaking">Speaking</a></li>
         <li><a href="#workshop">Workshop</a></li>
         <li><a href="#coaching">Coaching</a></li>
-        <li><a href="#speaking">Speaking</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
       </ul>
     </nav>
     <button class="btn btn-gold" data-book>Book a free call</button>
   </div>
 </header>
 
-<div style="background:#e8743b;color:#151515;font-size:14px;font-weight:600;text-align:center;padding:9px 16px">Reading The Invisible Loop? Free for readers: <a href="#printable-diagnostic" style="color:#151515">printable diagnostic</a> · <a href="#exercise-pack" style="color:#151515">chapter worksheets</a></div>
+<div style="background:#e8743b;color:#151515;font-size:14px;font-weight:600;text-align:center;padding:9px 16px">Reading The Invisible Loop? Free for readers: <a href="#" data-open="dgmodal" style="color:#151515">printable diagnostic</a> · <a href="#" data-open="wsmodal" style="color:#151515">chapter worksheets</a></div>
+
 <main id="top">
 
 <!-- 1. HERO -->
@@ -494,32 +508,26 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
         <p class="hook">Success does not break the loop. It raises the price.</p>
         <p class="lede">Most high achievers do not plateau because they lack discipline, drive or strategy. They plateau because an old pattern tied to their identity pulls them back, however hard they push.</p>
         <div class="ctas">
-          <button class="btn btn-gold btn-lg" data-book>Book a free call <span class="arrow" aria-hidden="true">→</span></button>
-          <a class="btn btn-line" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Take the free diagnostic</a>
+          <a class="btn btn-gold btn-lg" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Take the free diagnostic <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-line" href="#book">Get the book</a>
         </div>
-        <p class="micro meta">Free 30-minute discovery call · or <a href="#book" style="color:var(--gold-soft)">get the book</a></p>
+        <p class="micro meta">Free · about 8 minutes</p>
       </div>
       <figure class="hero-cover">
         <img src="assets/cover.jpg" alt="Cover of The Invisible Loop by Lim Pei Fang">
-        <figcaption><span>The new book</span><a href="#book">See formats →</a></figcaption>
       </figure>
-    </div>
-    <div class="creds3">
-      <div><b>Author</b>The Invisible Loop</div>
-      <div><b>Founder, Inner Channel</b>Creator of the I CLEAR method</div>
-      <div><b>Coach and mentor</b>Licensed NLP Practitioner, Singapore</div>
     </div>
   </div>
 </section>
 
-<!-- 2. PROBLEM + DIAGNOSTIC (one section) -->
-<section class="section" id="problem">
+<!-- 2. DIAGNOSTIC -->
+<section class="section" id="diagnostic">
   <div class="wrap">
     <div class="problem-grid">
       <div>
         <div class="eyebrow">The problem</div>
         <h2 class="h2" style="margin-top:14px">It is not your strategy. It is an old belief, still deciding for you.</h2>
-        <p class="lead">Capable people hit a ceiling they cannot strategise past. Under pressure, a belief learned in harder times takes over. The higher the stakes, the more it decides, and the bill lands on your career, your health, your money and the people who rely on you.</p>
+        <p class="lead">Capable people hit a ceiling they cannot strategise past. Under pressure, a belief learned in harder times takes over, and the bill lands on your career, your health, your money and the people who rely on you.</p>
       </div>
       <ul class="signs" aria-label="Three signs a loop is costing you">
         <li><span class="n">1</span><div><h3>It repeats</h3><p>The third time, with different people or in a different setting.</p></div></li>
@@ -527,14 +535,14 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
         <li><span class="n">3</span><div><h3>It spills onto others</h3><p>Your team, investors, clients and family start paying for it too.</p></div></li>
       </ul>
     </div>
-    <div class="diag-strip" id="diagnostic">
+    <div class="diag-strip">
       <div>
         <span class="eyebrow">Free · 8 minutes</span>
         <h3>The Invisible Loop Diagnostic</h3>
         <p>If you feel like you are running twice as fast and ending up in the same place, you are not failing. Before you try another strategy, see exactly where the loop is holding you back.</p>
         <div class="go">
           <a class="btn btn-gold" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Start the diagnostic <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="textlink" href="#printable-diagnostic" style="color:var(--silver)">Prefer paper? Print it</a>
+          <a class="textlink" href="#" data-open="dgmodal" style="color:var(--silver)">Prefer paper? Download the printable</a>
         </div>
       </div>
       <ul aria-label="In eight minutes, you will see">
@@ -547,135 +555,85 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
   </div>
 </section>
 
-<!-- 2b. PRINTABLE DIAGNOSTIC -->
-<section class="section printdiag" id="printable-diagnostic">
-  <div class="wrap pack-grid">
-    <div>
-      <div class="eyebrow">Free printable</div>
-      <h2 class="h2" style="margin:14px 0 16px">The diagnostic, on paper</h2>
-      <p class="lead">Prefer a pen to a screen? Print the full Invisible Loop Diagnostic and score it by hand. Keep it close. You will come back to it all through the book.</p>
-      <ul class="chlist" aria-label="What is in the printable diagnostic">
-        <li><b>32</b><div>Short statements, each rated 0 to 3 for the past month</div></li>
-        <li><b>4</b><div>Parts of the loop, each scored out of 24 on the scoring table</div></li>
-        <li><b>3</b><div>Score bands, so you can see which parts are quiet, active or strong</div></li>
-      </ul>
-    </div>
-    <div class="formcard">
-      <h3>Get the printable diagnostic</h3>
-      <p>Enter your email and the download opens straight away.</p>
-      <form id="dg-form" novalidate>
-        <div class="field"><label for="dg-name">Name</label><input id="dg-name" name="name" autocomplete="name" required></div>
-        <div class="field"><label for="dg-email">Email</label><input id="dg-email" name="email" type="email" autocomplete="email" required></div>
-        <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:4px 0 16px;cursor:pointer"><input type="checkbox" name="optin" style="margin-top:4px;accent-color:var(--navy)"> Send me the newsletter, with occasional news on the book and workshops. Unsubscribe any time.</label>
-        <button class="btn btn-navy" style="width:100%" type="submit">Download the diagnostic <span class="arrow" aria-hidden="true">→</span></button>
-      </form>
-      <div class="dl" id="dg-dl" aria-live="polite"></div>
-    </div>
-  </div>
-</section>
-
 <!-- 3. BOOK -->
 <section class="section book" id="book">
   <div class="wrap">
     <div class="book-grid">
       <div class="cover"><img src="assets/cover.jpg" alt="Cover of The Invisible Loop by Lim Pei Fang"></div>
       <div>
-        <span class="badge">The book · Pre-order</span>
+        <span class="badge">The book</span>
         <h2>The Invisible Loop</h2>
         <p class="sub">Why High Achievers Repeat the Same Patterns, and How to Finally Break Free</p>
         <div class="copy">
           <p class="first">You have done everything right. The career, the title, the life others admire. Why, then, does it still feel like this?</p>
-          <p>You replay the same worries. You keep delivering while running on empty. You shrink in rooms you have earned. You change jobs, plans or relationships, only to find the same problems waiting for you.</p>
+          <p>You replay the same worries. You keep delivering while running on empty. You change jobs, plans or relationships, only to find the same problems waiting for you.</p>
           <p>Nothing is wrong with you. You are caught in a loop. And loops can be broken. Inside is I CLEAR, the six-step method I used to break my own.</p>
         </div>
-        <ul class="takeaways" aria-label="What you will take away">
-          <li>Why the same problem keeps finding you, and how to recognise your own loop</li>
-          <li>How a loop that feels private ends up costing a promotion, a deal or your health</li>
-          <li>How to tell whether fear or your higher self is making a big decision, before you make it</li>
-          <li>A worksheet for every chapter, built for an ordinary working week</li>
-        </ul>
+        <div class="offers2" id="buy">
+          <article class="offer">
+            <span class="k">Instant download</span>
+            <h3>eBook</h3>
+            <div class="price" data-price="ebook"></div>
+            <button class="btn btn-ember" data-checkout="ebook">Buy the eBook <span class="arrow" aria-hidden="true">→</span></button>
+          </article>
+          <article class="offer">
+            <span class="k">Listen on the move</span>
+            <h3>Audiobook</h3>
+            <div class="price" data-price="audiobook"></div>
+            <button class="btn btn-ember" data-checkout="audiobook">Buy the audiobook <span class="arrow" aria-hidden="true">→</span></button>
+          </article>
+        </div>
+        <p class="freepack">Every copy comes with the free chapter worksheets.</p>
+        <div class="mini">
+          <div><b>Already reading the book?</b><span>Download the chapter worksheets, all eight or only the ones you need.</span></div>
+          <button class="btn btn-line" style="color:#f4f1ea" data-open="wsmodal">Get the worksheets</button>
+        </div>
       </div>
     </div>
-
-    <div class="offers" id="buy">
-      <article class="offer">
-        <span class="k">Instant download</span>
-        <h3>eBook</h3>
-        <div class="price" data-price="ebook"></div>
-        <span class="free">Free Exercise Pack included</span>
-        <button class="btn btn-ember" data-checkout="ebook">Buy the eBook <span class="arrow" aria-hidden="true">→</span></button>
-      </article>
-      <article class="offer">
-        <span class="k">Shipped to you</span>
-        <h3>Paperback</h3>
-        <div class="price" data-price="paperback"></div>
-        <span class="free">Free Exercise Pack included</span>
-        <button class="btn btn-line" data-checkout="paperback">Pre-order the paperback</button>
-      </article>
-      <article class="offer">
-        <span class="k">Listen on the move</span>
-        <h3>Audiobook</h3>
-        <div class="price" data-price="audiobook"></div>
-        <span class="free">Free Exercise Pack included</span>
-        <button class="btn btn-line" data-checkout="audiobook">Get the audiobook</button>
-      </article>
-    </div>
-    <div class="coachbundle">
-      <div>
-        <span class="k">Book + Coaching</span>
-        <h3>Read it, then work on your loop with me</h3>
-        <p>Any format of the book, the free Exercise Pack, and a 1:1 Loop Breakthrough session with Pei Fang. Bring your diagnostic result. We find the belief driving your loop and your first move to break it.</p>
-      </div>
-      <button class="btn btn-ember btn-lg" data-checkout="coaching">Get Book + Coaching <span class="arrow" aria-hidden="true">→</span></button>
-    </div>
-    <div class="after"><span>Bought the book on Amazon or another store? <a href="#exercise-pack" style="color:#f4f1ea;font-weight:600">Claim your free Exercise Pack</a></span></div>
   </div>
 </section>
 
-<!-- 4. FREE EXERCISE PACK -->
-<section class="section pack" id="exercise-pack">
-  <div class="wrap pack-grid">
-    <div>
-      <div class="eyebrow">Free for readers of the book</div>
-      <h2 class="h2" style="margin:14px 0 16px">Chapter worksheets</h2>
-      <p class="lead" style="color:#4f586b">Every chapter ends with a worksheet. Download them as printable PDFs, all eight at once or only the chapters you are working on. Free for every reader, wherever you bought the book.</p>
-      <ul class="chlist" aria-label="Chapter worksheets">
-        <li><b>Ch 1</b><div>Your Loop, Facts or Story?</div></li>
-        <li><b>Ch 2</b><div>The Hidden Cost Check</div></li>
-        <li><b>Ch 3</b><div>Your Identity Wardrobe</div></li>
-        <li><b>Ch 4</b><div>The Confront Journal</div></li>
-        <li><b>Ch 5</b><div>The Let Go Ledger</div></li>
-        <li><b>Ch 6</b><div>The Enlist Card</div></li>
-        <li><b>Ch 7</b><div>The Loop Tracker</div></li>
-        <li><b>Ch 8</b><div>Your Rise Plan</div></li>
-      </ul>
+<!-- 4. SPEAKING -->
+<section class="section dark" id="speaking">
+  <div class="wrap">
+    <div style="max-width:720px;margin-bottom:44px">
+      <div class="eyebrow">Speaking</div>
+      <h2 class="h2" style="color:#fff;margin:14px 0 16px">Keynotes and workshops for teams under pressure</h2>
+      <p class="lead">For conferences, leadership programmes, and HR and learning and development teams supporting people through restructuring or a step up.</p>
     </div>
-    <div class="formcard">
-      <h3>Get your free worksheets</h3>
-      <p>Enter your email and the downloads open straight away.</p>
-      <form id="pack-form" novalidate>
-        <div class="field"><label for="pk-name">Name</label><input id="pk-name" name="name" autocomplete="name" required></div>
-        <div class="field"><label for="pk-email">Email</label><input id="pk-email" name="email" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="pk-where">Where did you get the book?</label>
-          <select id="pk-where" name="where">
-            <option>Bought it on this website</option><option>Amazon</option><option>Another online store</option><option>A bookshop</option><option>It was a gift</option>
-          </select>
+    <div class="speak">
+      <div>
+        <figure class="gallery-wide"><img src="assets/speak-room.jpg" alt="Pei Fang speaking to a full room at the Centre for Inner Studies, Singapore" loading="lazy"></figure>
+        <div class="gallery2">
+          <figure><img src="assets/speak-1.jpg" alt="Pei Fang speaking on stage" loading="lazy"></figure>
+          <figure><img src="assets/speak-3.jpg" alt="Pei Fang leading an audience exercise" loading="lazy"></figure>
         </div>
-        <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:4px 0 16px;cursor:pointer"><input type="checkbox" name="optin" style="margin-top:4px;accent-color:var(--navy)"> Send me the newsletter, with occasional news on the book and workshops. Unsubscribe any time.</label>
-        <button class="btn btn-navy" style="width:100%" type="submit">Show my downloads <span class="arrow" aria-hidden="true">→</span></button>
-      </form>
-      <div class="dl" id="pack-dl" aria-live="polite"></div>
+      </div>
+      <div>
+        <ul class="topics" aria-label="Talks">
+          <li><b>Success does not break the loop</b><span>Why the pattern gets louder after the promotion, the raise or the exit.</span></li>
+          <li><b>Who you are without the title</b><span>Identity, restructuring and starting again.</span></li>
+          <li><b>What the loop costs a team</b><span>Why capable teams repeat the same patterns, and what it costs the business.</span></li>
+          <li><b>Energy work for high performers</b><span>Managing your energy, not only your time, and clearing what drains it.</span></li>
+        </ul>
+        <div class="proof">
+          <span><b>Volunteer</b> at the Centre for Inner Studies, Singapore, including workshop speaker at One Impact Week</span>
+          <span><b>Member</b>, Asia Pacific Professional Speakers (APSS) · Toastmasters</span>
+        </div>
+        <a class="btn btn-line" style="color:#fff" href="mailto:pf@limpeifang.com?subject=Speaking%20enquiry">Enquire about speaking</a>
+        <p class="micro" style="margin-top:12px">Or email pf@limpeifang.com</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- 5. WORKSHOP -->
-<section class="section workshop" id="workshop" style="background:var(--paper)">
+<section class="section" id="workshop">
   <div class="wrap ws-grid">
     <div>
       <span class="pill">Interest list open</span>
       <h2 class="h2" style="margin:20px 0 18px">The Invisible Loop Workshop</h2>
-      <p class="lead" style="color:#4f586b">Reading about your loop is one thing. Working on it in a room with people who carry the same pattern is another. A live, guided session to find your loop and start breaking it.</p>
+      <p class="lead">Reading about your loop is one thing. Working on it in a room with people who carry the same pattern is another. A live, guided session to find your loop and start breaking it.</p>
       <div class="ws-facts">
         <div><b>Live</b>Guided by Pei Fang</div>
         <div><b>Singapore and online</b>Tell us which you prefer</div>
@@ -707,72 +665,30 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
   </div>
 </section>
 
-<!-- 6. COACHING -->
+<!-- 6. INDIVIDUAL COACHING: starts with a discovery call -->
 <section class="section" id="coaching" style="background:#e4e7ec">
-  <div class="wrap coach">
+  <div class="wrap coach1">
     <div>
-      <div class="eyebrow">1:1 coaching</div>
-      <h2 class="h2" style="margin:14px 0 18px">When you have seen the loop and want it gone</h2>
-      <p class="lead">Coaching is for people who are ready to change the pattern, not only understand it. We work on the problem that keeps finding you, so you make clearer calls at work and at home.</p>
-      <h3 class="k">This is for you if</h3>
+      <div class="eyebrow">Individual coaching</div>
+      <h2 class="h2" style="margin:14px 0 18px">It starts with a free discovery call</h2>
+      <p class="lead">For people who are ready to change the pattern, not only understand it. On a 30-minute call we look at the problem that keeps repeating, find which part of the loop is driving it, and decide together whether working with me is the right next step.</p>
       <ul class="checks">
         <li>You run a business and cannot switch off</li>
-        <li>You are a senior executive, dealmaker or investor, and the same pattern costs more with every step up</li>
-        <li>Your role has been restructured, and the old identity followed you into the next chapter</li>
+        <li>The same pattern costs more with every step up</li>
+        <li>Your role has been restructured, and the old identity followed you</li>
         <li>You are carrying a career, ageing parents and a household at once</li>
       </ul>
-      <h3 class="k">On the discovery call</h3>
-      <ol class="call">
-        <li>We look at the problem that keeps repeating, and where it shows up</li>
-        <li>We find which part of the loop is driving it</li>
-        <li>We decide together whether coaching is the right next step</li>
-      </ol>
     </div>
     <aside class="panel" aria-label="Book a discovery call">
-      <span class="eyebrow">Free · No obligation</span>
+      <span class="eyebrow">Free · 30 minutes</span>
       <h3>Book a discovery call</h3>
       <p>A conversation, not a sales pitch. I know the pressure you work under, because I lived inside it before I ever called myself a coach.</p>
-      <button class="btn btn-gold" data-book>Book a free call <span class="arrow" aria-hidden="true">→</span></button>
-      <p class="tip">Bring your diagnostic result. It makes the call sharper. <a href="https://loop.limpeifang.com/" target="_blank" rel="noopener" style="color:var(--gold-soft)">Take it now</a></p>
+      <button class="btn btn-gold" data-book>Choose a time <span class="arrow" aria-hidden="true">→</span></button>
     </aside>
   </div>
 </section>
 
-<!-- 7. SPEAKING -->
-<section class="section dark" id="speaking">
-  <div class="wrap">
-    <div style="max-width:720px;margin-bottom:44px">
-      <div class="eyebrow">Speaking</div>
-      <h2 class="h2" style="color:#fff;margin:14px 0 16px">Keynotes and workshops for teams under pressure</h2>
-      <p class="lead">For conferences, leadership programmes, and HR and learning and development teams supporting people through restructuring or a step up.</p>
-    </div>
-    <div class="speak">
-      <div>
-      <figure class="gallery-wide"><img src="assets/speak-room.jpg" alt="Pei Fang speaking to a full room at the Centre for Inner Studies, Singapore" loading="lazy"></figure>
-      <div class="gallery2">
-        <figure><img src="assets/speak-1.jpg" alt="Pei Fang speaking on stage" loading="lazy"></figure>
-        <figure><img src="assets/speak-3.jpg" alt="Pei Fang leading an audience exercise" loading="lazy"></figure>
-      </div>
-      </div>
-      <div>
-        <ul class="topics" aria-label="Talks">
-          <li><b>Success does not break the loop</b><span>Why the pattern gets louder after the promotion, the raise or the exit.</span></li>
-          <li><b>Who you are without the title</b><span>Identity, restructuring and starting again.</span></li>
-          <li><b>What the loop costs a team</b><span>Why capable teams repeat the same patterns, and what it costs the business.</span></li>
-          <li><b>Energy work for high performers</b><span>Managing your energy, not only your time, and clearing what drains it.</span></li>
-        </ul>
-        <div class="proof">
-          <span><b>Volunteer</b> at the Centre for Inner Studies, Singapore, including workshop speaker at One Impact Week</span>
-          <span><b>Member</b>, Asia Pacific Professional Speakers (APSS) · Toastmasters</span>
-        </div>
-        <a class="btn btn-line" style="color:#fff" href="mailto:pf@limpeifang.com?subject=Speaking%20enquiry">Enquire about speaking</a>
-        <p class="micro" style="margin-top:12px">Or email <a href="mailto:pf@limpeifang.com" style="color:var(--gold-soft)">pf@limpeifang.com</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 8. ABOUT -->
+<!-- 7. ABOUT -->
 <section class="section" id="about">
   <div class="wrap about3">
     <img src="assets/portrait.jpg" alt="Portrait of Lim Pei Fang" loading="lazy">
@@ -788,23 +704,19 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
       <div class="quals" aria-label="Background">
         <span>Licensed NLP Practitioner</span><span>Coach and mentor</span><span>Energy work (Pranic Healing)</span><span>Volunteer, Centre for Inner Studies</span>
       </div>
-      <div class="links">
-        <a class="textlink" href="https://www.linkedin.com/in/lim-peifang" target="_blank" rel="noopener">Follow on LinkedIn</a>
-        <a class="textlink" href="#coaching">Book a discovery call</a>
-      </div>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS: add here once client quotes are approved -->
 
+<!-- 8. NEWSLETTER -->
 <section class="section newsletter" id="newsletter">
   <div class="wrap nl-grid">
     <div>
       <div class="eyebrow">Newsletter</div>
       <h2 class="h2" style="color:#fff;margin:14px 0 16px">Notes on breaking the loop</h2>
       <p class="lead">Short, practical notes on the patterns that hold capable people back, in the same spirit as my LinkedIn posts. Plus first news of the book, workshops and new tools.</p>
-      <p style="margin-top:18px"><a class="textlink" href="https://www.linkedin.com/in/lim-peifang" target="_blank" rel="noopener" style="color:var(--gold-soft)">Prefer LinkedIn? Follow me there</a></p>
     </div>
     <div>
       <form class="nl-form" id="nl-form" novalidate>
@@ -816,42 +728,31 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
     </div>
   </div>
 </section>
-
-<section class="final">
-  <div class="wrap final-grid">
-    <div>
-      <h2>The same problem will find you in the next role. Unless you change what is making the decision.</h2>
-      <p>Start with a free 30-minute call, or see your loop in eight minutes with the diagnostic.</p>
-    </div>
-    <div class="ctas">
-      <button class="btn btn-gold btn-lg" data-book>Book a free call <span class="arrow" aria-hidden="true">→</span></button>
-      <a class="btn btn-line" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Take the free diagnostic</a>
-    </div>
-  </div>
-</section>
 </main>
 
 <footer>
   <div class="wrap foot">
     <img src="assets/logo.png" alt="Inner Channel">
     <p style="max-width:46ch">© 2026 Inner Channel Pte Ltd, Singapore. The diagnostic, book and worksheets are tools for self-reflection, not medical or psychological advice. If things feel too heavy, please speak with a doctor, a counsellor or someone you trust.</p>
-    <nav aria-label="Offers"><b>Start</b>
-      <a href="https://loop.limpeifang.com/" target="_blank" rel="noopener">The Diagnostic</a><a href="#book">The Book</a><a href="#printable-diagnostic">Printable diagnostic</a><a href="#exercise-pack">Chapter worksheets</a><a href="#workshop">Workshop</a><a href="#coaching">Discovery call</a><a href="#newsletter">Newsletter</a>
+    <nav aria-label="Footer"><b>Contact</b>
+      <a href="mailto:pf@limpeifang.com">pf@limpeifang.com</a>
+      <a href="https://www.linkedin.com/in/lim-peifang" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
-    <nav aria-label="More"><b>More</b>
-      <a href="#speaking">Speaking</a><a href="#about">About</a><a href="https://www.linkedin.com/in/lim-peifang" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:pf@limpeifang.com">pf@limpeifang.com</a>
+    <nav aria-label="Free for readers"><b>Free for readers</b>
+      <a href="#" data-open="dgmodal">Printable diagnostic</a>
+      <a href="#" data-open="wsmodal">Chapter worksheets</a>
     </nav>
   </div>
 </footer>
 
 <div class="mbar" id="mbar"><button class="btn btn-gold" data-book>Book a free call →</button></div>
 
-<!-- BOOK A CALL CHOOSER -->
+<!-- BOOK A CALL -->
 <div class="overlay" id="booker" role="dialog" aria-modal="true" aria-labelledby="bk-title">
   <div class="sheet" style="max-width:520px">
     <div class="sheet-head"><b id="bk-title">Book a free call</b><button class="x" data-close aria-label="Close">×</button></div>
     <div class="sheet-body">
-      <p style="color:var(--muted);margin-bottom:16px">A 30-minute discovery call. A conversation, not a sales pitch. Choose how you would like to book.</p>
+      <p style="color:var(--muted);margin-bottom:16px">A 30-minute discovery call. A conversation, not a sales pitch.</p>
       <div class="book-opts">
         <a class="book-opt" id="bk-cal" href="https://calendly.com/pf-limpeifang/30min" target="_blank" rel="noopener"><span class="ic" style="background:#006bff">📅</span><span><b>Pick a time on Calendly</b><small>See my free slots and book instantly</small></span><span class="go">→</span></a>
         <a class="book-opt" id="bk-wa" href="#" target="_blank" rel="noopener"><span class="ic" style="background:#25d366">💬</span><span><b>Message me on WhatsApp</b><small>Ask a question first, or arrange a time</small></span><span class="go">→</span></a>
@@ -861,56 +762,65 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
   </div>
 </div>
 
-<!-- CHECKOUT OVERLAY -->
+<!-- PRINTABLE DIAGNOSTIC -->
+<div class="overlay" id="dgmodal" role="dialog" aria-modal="true" aria-labelledby="dg-title">
+  <div class="sheet" style="max-width:520px">
+    <div class="sheet-head"><b id="dg-title">Printable diagnostic</b><button class="x" data-close aria-label="Close">×</button></div>
+    <div class="sheet-body">
+      <p style="color:var(--muted);margin-bottom:16px">All 32 statements, the scoring table and the score bands, ready to print and fill in by hand.</p>
+      <form id="dg-form" novalidate>
+        <div class="field"><label for="dg-name">Name</label><input id="dg-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="dg-email">Email</label><input id="dg-email" name="email" type="email" autocomplete="email" required></div>
+        <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:4px 0 16px;cursor:pointer"><input type="checkbox" name="optin" style="margin-top:4px;accent-color:var(--navy)"> Send me the newsletter. Unsubscribe any time.</label>
+        <button class="btn btn-navy" style="width:100%" type="submit">Download <span class="arrow" aria-hidden="true">→</span></button>
+      </form>
+      <div class="dl" id="dg-dl" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+
+<!-- CHAPTER WORKSHEETS -->
+<div class="overlay" id="wsmodal" role="dialog" aria-modal="true" aria-labelledby="wsm-title">
+  <div class="sheet" style="max-width:520px">
+    <div class="sheet-head"><b id="wsm-title">Chapter worksheets</b><button class="x" data-close aria-label="Close">×</button></div>
+    <div class="sheet-body">
+      <p style="color:var(--muted);margin-bottom:16px">Free for every reader, wherever you bought the book. Print all eight, or only the chapters you are working on.</p>
+      <form id="pack-form" novalidate>
+        <div class="field"><label for="pk-name">Name</label><input id="pk-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="pk-email">Email</label><input id="pk-email" name="email" type="email" autocomplete="email" required></div>
+        <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:4px 0 16px;cursor:pointer"><input type="checkbox" name="optin" style="margin-top:4px;accent-color:var(--navy)"> Send me the newsletter. Unsubscribe any time.</label>
+        <button class="btn btn-navy" style="width:100%" type="submit">Show my downloads <span class="arrow" aria-hidden="true">→</span></button>
+      </form>
+      <div class="dl" id="pack-dl" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKOUT -->
 <div class="overlay" id="checkout" role="dialog" aria-modal="true" aria-labelledby="co-title">
-  <div class="sheet" style="max-width:620px">
+  <div class="sheet" style="max-width:520px">
     <div class="sheet-head"><b id="co-title">Your order</b><button class="x" data-close aria-label="Close">×</button></div>
     <div class="sheet-body">
-      <div class="steps"><span class="on"></span><span id="st2"></span></div>
-      <div id="co-1">
-        <div class="co-h" style="margin-top:0">Choose your format</div>
-        <label class="opt"><input type="radio" name="fmt" value="ebook"><span><b>eBook</b><small>Instant download</small></span><span class="amt" data-amt="ebook"></span></label>
-        <label class="opt"><input type="radio" name="fmt" value="paperback"><span><b>Paperback</b><small>Shipped to you</small></span><span class="amt" data-amt="paperback"></span></label>
-        <label class="opt"><input type="radio" name="fmt" value="audiobook"><span><b>Audiobook</b><small>Listen on the move</small></span><span class="amt" data-amt="audiobook"></span></label>
-
-        <div class="inc"><span><b>Free Exercise Pack included</b>All 8 chapter worksheets. Download all of them or only the chapters you need.</span></div>
-        <div class="inc" id="sess-inc" hidden><span><b>1:1 Loop Breakthrough session with Pei Fang <span data-amt="session"></span></b>Included in Book + Coaching. You choose a time after checkout.</span></div>
-
-        <label class="bump" id="bump-wrap">
-          <input type="checkbox" id="bump">
-          <span><span class="k">One-time add-on</span><b>Add a 1:1 Loop Breakthrough session with Pei Fang <span data-amt="session" style="font-weight:700"></span></b>
-          <p>Bring your diagnostic result. We find the belief driving your loop and the first move to break it. Only offered with your order.</p></span>
-        </label>
-
-        <div class="total"><span>Total</span><b id="tot"></b></div>
-        <div class="co-actions"><span class="micro" id="co-hint"></span><button class="btn btn-navy" id="co-next">Continue <span class="arrow" aria-hidden="true">→</span></button></div>
-      </div>
-      <div id="co-2" hidden>
-        <ul class="summary" id="co-sum"></ul>
-        <form id="co-form" novalidate>
-          <div class="field"><label for="co-name">Name</label><input id="co-name" autocomplete="name" required></div>
-          <div class="field"><label for="co-email">Email</label><input id="co-email" type="email" autocomplete="email" required></div>
-          <div class="co-actions"><button type="button" class="back" id="co-back">← Back</button><button class="btn btn-ember" type="submit" id="co-submit">Reserve my order <span class="arrow" aria-hidden="true">→</span></button></div>
-          <p class="formnote" id="co-fine"></p>
-        </form>
-        <div class="done" id="co-done" role="status"></div>
-      </div>
+      <ul class="summary" id="co-sum"></ul>
+      <form id="co-form" novalidate>
+        <div class="field"><label for="co-name">Name</label><input id="co-name" autocomplete="name" required></div>
+        <div class="field"><label for="co-email">Email</label><input id="co-email" type="email" autocomplete="email" required></div>
+        <button class="btn btn-ember" style="width:100%" type="submit" id="co-submit">Reserve my copy <span class="arrow" aria-hidden="true">→</span></button>
+        <p class="formnote" id="co-fine"></p>
+      </form>
+      <div class="done" id="co-done" role="status"></div>
     </div>
   </div>
 </div>
 
 <script>
-/* ===================== FILL THESE IN ===================== */
 const CONFIG = {
   currency: "S$",
   // Prices as numbers, e.g. 24.90. Leave null to show "Price announced at launch".
-  prices: { ebook:null, paperback:null, audiobook:null, session:null },
-  // Payhip (or other) checkout links. "_session" = the same format with the 1:1 session bundled.
+  prices: { ebook:null, audiobook:null },
+  // Payhip checkout link for each format.
   // Leave "" and the button takes a free pre-order instead.
-  payLinks: {
-    ebook:"", paperback:"", audiobook:"",
-    ebook_session:"", paperback_session:"", audiobook_session:""
-  },
+  payLinks: { ebook:"", audiobook:"" },
   // Exercise Pack PDF links: one file with all 8, plus one per chapter.
   packLinks: { diag:"downloads/The-Invisible-Loop-Diagnostic-Printable.pdf", all:"downloads/The-Invisible-Loop-Exercise-Pack-All-8.pdf",
     ch1:"downloads/Ch1-facts-or-story.pdf", ch2:"downloads/Ch2-hidden-cost-check.pdf", ch3:"downloads/Ch3-identity-wardrobe.pdf",
@@ -925,19 +835,14 @@ const CONFIG = {
   whatsapp: "",
   whatsappText: "Hi Pei Fang, I found you through your website and would like to book a discovery call."
 };
-/* ========================================================= */
 
 const SHEETS=[["ch1","Ch 1 · Your Loop, Facts or Story?"],["ch2","Ch 2 · The Hidden Cost Check"],["ch3","Ch 3 · Your Identity Wardrobe"],["ch4","Ch 4 · The Confront Journal"],["ch5","Ch 5 · The Let Go Ledger"],["ch6","Ch 6 · The Enlist Card"],["ch7","Ch 7 · The Loop Tracker"],["ch8","Ch 8 · Your Rise Plan"]];
-const FMT={ebook:"eBook",paperback:"Paperback",audiobook:"Audiobook"};
-
+const FMT={ebook:"eBook",audiobook:"Audiobook"};
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-const store={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 const money=n=>n==null?"":CONFIG.currency+(Number.isInteger(n)?n:n.toFixed(2));
 const validEmail=v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-
 async function sendLead(type,data){
   if(!CONFIG.formEndpoint) return false;
-  // Same Google Sheet webhook as the diagnostic. no-cors: the sheet receives it, the page cannot read the reply.
   try{await fetch(CONFIG.formEndpoint,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify({type,...data,source:"website",at:new Date().toISOString()})});return true}catch(e){return false}
 }
 
@@ -947,97 +852,63 @@ function openOv(id){lastFocus=document.activeElement;$("#"+id).classList.add("op
 function closeOv(el){el.classList.remove("open");if(!$$(".overlay.open").length)document.body.classList.remove("locked");lastFocus&&lastFocus.focus&&lastFocus.focus()}
 $$("[data-close]").forEach(b=>b.addEventListener("click",()=>closeOv(b.closest(".overlay"))));
 $$(".overlay").forEach(o=>o.addEventListener("click",e=>{if(e.target===o)closeOv(o)}));
-document.addEventListener("keydown",e=>{
-  const open=[...$$(".overlay.open")].pop(); if(!open)return;
-  if(e.key==="Escape")closeOv(open);
-});
+document.addEventListener("keydown",e=>{const o=[...$$(".overlay.open")].pop();if(o&&e.key==="Escape")closeOv(o)});
+$$("[data-open]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();openOv(a.dataset.open)}));
+if(location.hash==="#printable-diagnostic")openOv("dgmodal");
+if(location.hash==="#exercise-pack"||location.hash==="#worksheets")openOv("wsmodal");
 
-/* ---------- checkout ---------- */
-let coachMode=false;
-const P=CONFIG.prices;
-function setPrices(){
-  $$("[data-price]").forEach(el=>{const v=P[el.dataset.price];el.innerHTML=v==null?"Price announced at launch":"<b>"+money(v)+"</b>"});
-  $$("[data-amt]").forEach(el=>{const v=P[el.dataset.amt];el.textContent=v==null?"":(el.closest(".bump,.inc")?"· "+money(v):money(v))});
-}
-const fmt=()=>(document.querySelector('input[name="fmt"]:checked')||{}).value;
-const withSession=()=>coachMode||$("#bump").checked;
-function calc(){
-  const f=fmt(),items=[FMT[f]+" of The Invisible Loop","Free Exercise Pack (8 chapters)"];
-  let t=P[f],known=P[f]!=null;
-  if(withSession()){items.push("1:1 Loop Breakthrough session"+(coachMode?" (included)":""));if(P.session==null)known=false;else t+=P.session}
-  return{f,items,t,known,link:CONFIG.payLinks[f+(withSession()?"_session":"")]};
-}
-function refresh(){const c=calc();$("#tot").textContent=c.known?money(c.t):"Confirmed at launch";$("#co-hint").textContent=c.known?"":"Nothing is charged today."}
-$$("#co-1 input").forEach(i=>i.addEventListener("change",refresh));
-function openCheckout(kind){
-  coachMode=kind==="coaching";
-  $("#co-1").hidden=false;$("#co-2").hidden=true;$("#co-form").hidden=false;$("#co-done").classList.remove("show");$("#st2").classList.remove("on");
-  const f=coachMode?"paperback":kind;
-  document.querySelector(`input[name="fmt"][value="${f}"]`).checked=true;
-  $("#co-title").textContent=coachMode?"Book + Coaching":FMT[kind];
-  $("#sess-inc").hidden=!coachMode;$("#bump-wrap").hidden=coachMode;$("#bump").checked=false;
-  refresh();openOv("checkout");
-}
-$$("[data-checkout]").forEach(b=>b.addEventListener("click",()=>openCheckout(b.dataset.checkout)));
-$("#co-next").addEventListener("click",()=>{
-  const c=calc();
-  $("#co-sum").innerHTML=c.items.map(i=>`<li>${i}</li>`).join("")+`<li style="margin-top:8px;font-weight:700">${c.known?"Total "+money(c.t):"Price confirmed before you pay"}</li>`;
-  $("#co-submit").firstChild.textContent=c.link?"Continue to secure payment ":"Reserve my order ";
-  $("#co-fine").textContent=c.link?"You will be taken to the secure checkout to pay.":"Pre-order. Nothing is charged today. You get first notice and launch pricing.";
-  $("#co-1").hidden=true;$("#co-2").hidden=false;$("#st2").classList.add("on");
-});
-$("#co-back").addEventListener("click",()=>{$("#co-1").hidden=false;$("#co-2").hidden=true;$("#st2").classList.remove("on")});
-$("#co-form").addEventListener("submit",async e=>{
-  e.preventDefault();const name=$("#co-name").value.trim(),em=$("#co-email").value.trim(),d=$("#co-done");
-  if(!name||!validEmail(em)){d.textContent="Please add your name and a valid email.";d.classList.add("show");return}
-  const c=calc();
-  const ok=await sendLead(c.link?"checkout_started":"preorder",{name,email:em,items:c.items,session:withSession()});
-  if(c.link){location.href=c.link;return}
-  $("#co-form").hidden=true;
-  d.innerHTML=ok?`Thank you, ${name}. Your pre-order is reserved. Watch your inbox for launch details.`:`Thank you, ${name}. Online orders open shortly. To hold your place now, message me on <a href="${CONFIG.linkedin}" target="_blank" rel="noopener">LinkedIn</a> with the word “BOOK”.`;
-  d.classList.add("show");
-});
-
-/* ---------- free exercise pack ---------- */
-$("#pack-form").addEventListener("submit",async e=>{
-  e.preventDefault();const el=e.target.elements,dl=$("#pack-dl");
-  const name=el["name"].value.trim(),em=el["email"].value.trim();
-  if(!name||!validEmail(em)){dl.innerHTML=`<div class="soon">Please add your name and a valid email.</div>`;dl.classList.add("show");return}
-  sendLead("pack_claim",{name,email:em,where:el["where"].value,optin:el["optin"].checked?"yes":"no"});
-  const L=CONFIG.packLinks;
-  const row=(id,label,cls="")=>L[id]?`<a class="${cls}" href="${L[id]}" target="_blank" rel="noopener">${label}<span>PDF ↓</span></a>`:`<div class="soon">${label}<span>At launch</span></div>`;
-  dl.innerHTML=`<p style="font-size:15px;margin-bottom:4px">Thank you, ${name}. Here are your worksheets.</p>`+row("all","All 8 worksheets in one file","all")+`<p style="font-size:13px;color:var(--muted);margin:8px 0 2px">Or one chapter at a time</p>`+SHEETS.map(([id,t])=>row(id,t)).join("");
-  e.target.hidden=true;dl.classList.add("show");
-});
-
-/* ---------- workshop ---------- */
-$("#ws-form").addEventListener("submit",async e=>{
-  e.preventDefault();const f=e.target,el=f.elements,d=$("#ws-done");
-  const name=el["name"].value.trim(),em=el["email"].value.trim();
-  if(!name||!validEmail(em)){d.textContent="Please add your name and a valid email.";d.classList.add("show");return}
-  const ok=await sendLead("workshop_interest",{name,email:em,format:el["format"].value});
-  f.hidden=true;
-  d.innerHTML=ok?`You are on the list, ${name}. You will hear about dates before anyone else.`:`Thank you, ${name}. Registration goes live shortly. To hold your place now, message me on <a href="${CONFIG.linkedin}" target="_blank" rel="noopener">LinkedIn</a> with the word “WORKSHOP”.`;
-  d.classList.add("show");
-});
-
-/* ---------- booking + mobile bar ---------- */
+/* book a call */
 (function(){
   const cal=$("#bk-cal"),wa=$("#bk-wa");
   if(CONFIG.bookingUrl)cal.href=CONFIG.bookingUrl;
   if(CONFIG.whatsapp){wa.href="https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(CONFIG.whatsappText)}else{wa.hidden=true}
   $$("[data-book]").forEach(b=>b.addEventListener("click",()=>openOv("booker")));
-  [cal,wa].forEach(a=>a.addEventListener("click",()=>sendLead("book_click",{via:a===cal?"calendly":"whatsapp"})));
 })();
-/* printable diagnostic */
-$("#dg-form").addEventListener("submit",e=>{
-  e.preventDefault();const el=e.target.elements,dl=$("#dg-dl");
-  const name=el["name"].value.trim(),em=el["email"].value.trim();
-  if(!name||!validEmail(em)){dl.innerHTML=`<div class="soon">Please add your name and a valid email.</div>`;dl.classList.add("show");return}
-  sendLead("diagnostic_printable",{name,email:em,optin:el["optin"].checked?"yes":"no"});
-  dl.innerHTML=`<p style="font-size:15px;margin-bottom:4px">Thank you, ${name}. Here is your diagnostic.</p><a class="all" href="${CONFIG.packLinks.diag}" target="_blank" rel="noopener">The Invisible Loop Diagnostic (printable)<span>PDF ↓</span></a><p style="font-size:13.5px;color:var(--muted);margin-top:8px">Prefer it scored for you? <a href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Take it online</a>.</p>`;
-  e.target.hidden=true;dl.classList.add("show");
+
+/* checkout: one format per button */
+let fmt="ebook";
+$$("[data-price]").forEach(el=>{const v=CONFIG.prices[el.dataset.price];el.innerHTML=v==null?"Price announced at launch":"<b>"+money(v)+"</b>"});
+$$("[data-checkout]").forEach(b=>b.addEventListener("click",()=>{
+  fmt=b.dataset.checkout;const v=CONFIG.prices[fmt],link=CONFIG.payLinks[fmt];
+  $("#co-title").textContent="The Invisible Loop · "+FMT[fmt];
+  $("#co-sum").innerHTML=`<li><b>${FMT[fmt]}</b> of The Invisible Loop</li><li>Free chapter worksheets</li><li style="margin-top:8px;font-weight:700">${v==null?"Price confirmed before you pay":"Total "+money(v)}</li>`;
+  $("#co-submit").firstChild.textContent=link?"Continue to secure payment ":"Reserve my copy ";
+  $("#co-fine").textContent=link?"You will be taken to the secure checkout to pay.":"Pre-order. Nothing is charged today. You get first notice and launch pricing.";
+  $("#co-form").hidden=false;$("#co-done").classList.remove("show");openOv("checkout");
+}));
+$("#co-form").addEventListener("submit",async e=>{
+  e.preventDefault();const name=$("#co-name").value.trim(),em=$("#co-email").value.trim(),d=$("#co-done");
+  if(!name||!validEmail(em)){d.textContent="Please add your name and a valid email.";d.classList.add("show");return}
+  const link=CONFIG.payLinks[fmt];
+  await sendLead(link?"checkout_started":"preorder",{name,email:em,format:FMT[fmt]});
+  if(link){location.href=link;return}
+  $("#co-form").hidden=true;d.innerHTML=`Thank you, ${name}. Your copy is reserved. Watch your inbox for launch details.`;d.classList.add("show");
 });
+
+/* downloads */
+const L=CONFIG.packLinks;
+const row=(href,label,cls="")=>href?`<a class="${cls}" href="${href}" target="_blank" rel="noopener">${label}<span>PDF ↓</span></a>`:`<div class="soon">${label}<span>Soon</span></div>`;
+function gate(formSel,dlSel,type,render){
+  $(formSel).addEventListener("submit",e=>{
+    e.preventDefault();const el=e.target.elements,dl=$(dlSel);
+    const name=el["name"].value.trim(),em=el["email"].value.trim();
+    if(!name||!validEmail(em)){dl.innerHTML=`<div class="soon">Please add your name and a valid email.</div>`;dl.classList.add("show");return}
+    sendLead(type,{name,email:em,optin:el["optin"].checked?"yes":"no"});
+    dl.innerHTML=render(name);e.target.hidden=true;dl.classList.add("show");
+  });
+}
+gate("#dg-form","#dg-dl","diagnostic_printable",n=>`<p style="font-size:15px;margin-bottom:4px">Thank you, ${n}.</p>`+row(L.diag,"The Invisible Loop Diagnostic","all")+`<p style="font-size:13.5px;color:var(--muted);margin-top:8px">Prefer it scored for you? <a href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Take it online</a>.</p>`);
+gate("#pack-form","#pack-dl","pack_claim",n=>`<p style="font-size:15px;margin-bottom:4px">Thank you, ${n}.</p>`+row(L.all,"All 8 worksheets in one file","all")+`<p style="font-size:13px;color:var(--muted);margin:8px 0 2px">Or only the chapters you need</p><div class="chpick">`+SHEETS.map(([id,t])=>row(L[id],t)).join("")+`</div>`);
+
+/* workshop */
+$("#ws-form").addEventListener("submit",async e=>{
+  e.preventDefault();const f=e.target,el=f.elements,d=$("#ws-done");
+  const name=el["name"].value.trim(),em=el["email"].value.trim();
+  if(!name||!validEmail(em)){d.textContent="Please add your name and a valid email.";d.classList.add("show");return}
+  await sendLead("workshop_interest",{name,email:em,format:el["format"].value});
+  f.hidden=true;d.innerHTML=`You are on the list, ${name}. You will hear about dates before anyone else.`;d.classList.add("show");
+});
+
 /* newsletter */
 $("#nl-form").addEventListener("submit",async e=>{
   e.preventDefault();const el=e.target.elements,d=$("#nl-done");
@@ -1046,11 +917,12 @@ $("#nl-form").addEventListener("submit",async e=>{
   await sendLead("newsletter",{name,email:em,optin:"yes"});
   e.target.hidden=true;d.textContent=`Thank you${name?", "+name:""}. You are subscribed.`;d.classList.add("show");
 });
+
+/* mobile bar */
 (function(){const bar=$("#mbar"),hero=$(".hero");
   if(!("IntersectionObserver" in window))return;
   new IntersectionObserver(([en])=>bar.classList.toggle("show",!en.isIntersecting),{threshold:0}).observe(hero);
 })();
-setPrices();
 </script>
 </body>
 </html>
