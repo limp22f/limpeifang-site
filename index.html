@@ -486,11 +486,12 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
         <li><a href="#book">The Book</a></li>
         <li><a href="#speaking">Speaking</a></li>
         <li><a href="#workshop">Workshop</a></li>
-        <li><a href="#coaching">Coaching</a></li>
+        <li><a href="#coaching">Discovery call</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <button class="btn btn-gold" data-book>Book a free call</button>
+    <a class="btn btn-gold" href="https://calendly.com/pf-limpeifang/30min" target="_blank" rel="noopener" data-book>Book a free call</a>
   </div>
 </header>
 
@@ -665,13 +666,13 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
   </div>
 </section>
 
-<!-- 6. INDIVIDUAL COACHING: starts with a discovery call -->
+<!-- 6. DISCOVERY CALL -->
 <section class="section" id="coaching" style="background:#e4e7ec">
   <div class="wrap coach1">
     <div>
-      <div class="eyebrow">Individual coaching</div>
-      <h2 class="h2" style="margin:14px 0 18px">It starts with a free discovery call</h2>
-      <p class="lead">For people who are ready to change the pattern, not only understand it. On a 30-minute call we look at the problem that keeps repeating, find which part of the loop is driving it, and decide together whether working with me is the right next step.</p>
+      <div class="eyebrow">Discovery call</div>
+      <h2 class="h2" style="margin:14px 0 18px">Talk it through, free</h2>
+      <p class="lead">For people who are ready to change the pattern, not only understand it. On a 30-minute call we look at the problem that keeps repeating, find which part of the loop is driving it, and agree the right next step for you.</p>
       <ul class="checks">
         <li>You run a business and cannot switch off</li>
         <li>The same pattern costs more with every step up</li>
@@ -683,7 +684,7 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
       <span class="eyebrow">Free · 30 minutes</span>
       <h3>Book a discovery call</h3>
       <p>A conversation, not a sales pitch. I know the pressure you work under, because I lived inside it before I ever called myself a coach.</p>
-      <button class="btn btn-gold" data-book>Choose a time <span class="arrow" aria-hidden="true">→</span></button>
+      <a class="btn btn-gold" href="https://calendly.com/pf-limpeifang/30min" target="_blank" rel="noopener" data-book>Choose a time <span class="arrow" aria-hidden="true">→</span></a>
     </aside>
   </div>
 </section>
@@ -710,6 +711,30 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
 
 <!-- TESTIMONIALS: add here once client quotes are approved -->
 
+<!-- CONTACT -->
+<section class="section" id="contact" style="background:#e9e5da">
+  <div class="wrap ws-grid">
+    <div>
+      <div class="eyebrow">Get in touch</div>
+      <h2 class="h2" style="margin:14px 0 16px">Send me a message</h2>
+      <p class="lead" style="color:#4f586b">A question about the book, a speaking or workshop enquiry, or something on your mind that you would rather put in writing first. I read every message myself and will get back to you personally.</p>
+    </div>
+    <div class="formcard" style="position:static">
+      <form id="ct-form" novalidate>
+        <div class="field"><label for="ct-name">Name</label><input id="ct-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="ct-email">Email</label><input id="ct-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="ct-topic">About</label>
+          <select id="ct-topic" name="topic"><option>A question for Pei Fang</option><option>The book</option><option>Speaking enquiry</option><option>Workshop</option><option>Media or partnership</option><option>Something else</option></select>
+        </div>
+        <div class="field"><label for="ct-msg">Message</label><textarea id="ct-msg" name="message" rows="5" required style="font:16px var(--body);padding:12px 14px;border:1px solid #c9ccd3;border-radius:2px;resize:vertical"></textarea></div>
+        <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:4px 0 16px;cursor:pointer"><input type="checkbox" name="optin" style="margin-top:4px;accent-color:var(--navy)"> Send me the newsletter too. Unsubscribe any time.</label>
+        <button class="btn btn-navy" style="width:100%" type="submit">Send message <span class="arrow" aria-hidden="true">→</span></button>
+      </form>
+      <div class="done" id="ct-done" role="status"></div>
+    </div>
+  </div>
+</section>
+
 <!-- 8. NEWSLETTER -->
 <section class="section newsletter" id="newsletter">
   <div class="wrap nl-grid">
@@ -733,8 +758,9 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
 <footer>
   <div class="wrap foot">
     <img src="assets/logo.png" alt="Inner Channel">
-    <p style="max-width:46ch">© 2026 Inner Channel Pte Ltd, Singapore. The diagnostic, book and worksheets are tools for self-reflection, not medical or psychological advice. If things feel too heavy, please speak with a doctor, a counsellor or someone you trust.</p>
+    <p style="max-width:46ch">© 2026 Inner Channel Pte Ltd, Singapore. The diagnostic, book and worksheets are tools for self-reflection, not medical or psychological advice.</p>
     <nav aria-label="Footer"><b>Contact</b>
+      <a href="#contact">Send a message</a>
       <a href="mailto:pf@limpeifang.com">pf@limpeifang.com</a>
       <a href="https://www.linkedin.com/in/lim-peifang" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
@@ -745,22 +771,7 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
   </div>
 </footer>
 
-<div class="mbar" id="mbar"><button class="btn btn-gold" data-book>Book a free call →</button></div>
-
-<!-- BOOK A CALL -->
-<div class="overlay" id="booker" role="dialog" aria-modal="true" aria-labelledby="bk-title">
-  <div class="sheet" style="max-width:520px">
-    <div class="sheet-head"><b id="bk-title">Book a free call</b><button class="x" data-close aria-label="Close">×</button></div>
-    <div class="sheet-body">
-      <p style="color:var(--muted);margin-bottom:16px">A 30-minute discovery call. A conversation, not a sales pitch.</p>
-      <div class="book-opts">
-        <a class="book-opt" id="bk-cal" href="https://calendly.com/pf-limpeifang/30min" target="_blank" rel="noopener"><span class="ic" style="background:#006bff">📅</span><span><b>Pick a time on Calendly</b><small>See my free slots and book instantly</small></span><span class="go">→</span></a>
-        <a class="book-opt" id="bk-wa" href="#" target="_blank" rel="noopener"><span class="ic" style="background:#25d366">💬</span><span><b>Message me on WhatsApp</b><small>Ask a question first, or arrange a time</small></span><span class="go">→</span></a>
-      </div>
-      <p class="micro" style="margin-top:16px">Bring your diagnostic result if you have one. It makes the call sharper.</p>
-    </div>
-  </div>
-</div>
+<div class="mbar" id="mbar"><a class="btn btn-gold" href="https://calendly.com/pf-limpeifang/30min" target="_blank" rel="noopener" data-book>Book a free call →</a></div>
 
 <!-- PRINTABLE DIAGNOSTIC -->
 <div class="overlay" id="dgmodal" role="dialog" aria-modal="true" aria-labelledby="dg-title">
@@ -830,10 +841,7 @@ const CONFIG = {
   bookingUrl: "https://calendly.com/pf-limpeifang/30min",
   // Form backend (Formspree) for the workshop list, pack claims, pre-orders, saved results.
   formEndpoint: "https://script.google.com/macros/s/AKfycbyMKwZd1xij3aPPwTUJq3Ac-CG9dFwenGZj0JLXcTfA4g3r-z42cmcNyIFfMkupIF5Y/exec",
-  linkedin: "https://www.linkedin.com/in/lim-peifang",
-  // WhatsApp number in international format, digits only, e.g. "6591234567". Leave "" to hide the WhatsApp option.
-  whatsapp: "",
-  whatsappText: "Hi Pei Fang, I found you through your website and would like to book a discovery call."
+  linkedin: "https://www.linkedin.com/in/lim-peifang"
 };
 
 const SHEETS=[["ch1","Ch 1 · Your Loop, Facts or Story?"],["ch2","Ch 2 · The Hidden Cost Check"],["ch3","Ch 3 · Your Identity Wardrobe"],["ch4","Ch 4 · The Confront Journal"],["ch5","Ch 5 · The Let Go Ledger"],["ch6","Ch 6 · The Enlist Card"],["ch7","Ch 7 · The Loop Tracker"],["ch8","Ch 8 · Your Rise Plan"]];
@@ -857,13 +865,8 @@ $$("[data-open]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();o
 if(location.hash==="#printable-diagnostic")openOv("dgmodal");
 if(location.hash==="#exercise-pack"||location.hash==="#worksheets")openOv("wsmodal");
 
-/* book a call */
-(function(){
-  const cal=$("#bk-cal"),wa=$("#bk-wa");
-  if(CONFIG.bookingUrl)cal.href=CONFIG.bookingUrl;
-  if(CONFIG.whatsapp){wa.href="https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(CONFIG.whatsappText)}else{wa.hidden=true}
-  $$("[data-book]").forEach(b=>b.addEventListener("click",()=>openOv("booker")));
-})();
+/* book a call: log the click, Calendly handles the booking */
+$$("[data-book]").forEach(a=>{if(CONFIG.bookingUrl)a.href=CONFIG.bookingUrl;a.addEventListener("click",()=>sendLead("discovery_call_click",{}))});
 
 /* checkout: one format per button */
 let fmt="ebook";
@@ -907,6 +910,15 @@ $("#ws-form").addEventListener("submit",async e=>{
   if(!name||!validEmail(em)){d.textContent="Please add your name and a valid email.";d.classList.add("show");return}
   await sendLead("workshop_interest",{name,email:em,format:el["format"].value});
   f.hidden=true;d.innerHTML=`You are on the list, ${name}. You will hear about dates before anyone else.`;d.classList.add("show");
+});
+
+/* contact */
+$("#ct-form").addEventListener("submit",async e=>{
+  e.preventDefault();const f=e.target,el=f.elements,d=$("#ct-done");
+  const name=el["name"].value.trim(),em=el["email"].value.trim(),msg=el["message"].value.trim();
+  if(!name||!validEmail(em)||!msg){d.textContent="Please add your name, a valid email and a message.";d.classList.add("show");return}
+  await sendLead("contact",{name,email:em,topic:el["topic"].value,message:msg,optin:el["optin"].checked?"yes":"no"});
+  f.hidden=true;d.innerHTML=`Thank you, ${name}. Your message is on its way. I will reply to ${em} personally.`;d.classList.add("show");
 });
 
 /* newsletter */
