@@ -561,6 +561,32 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
 .nl-box .nl-done{background:#eef3ea;color:var(--ink);border-left-color:#4d7a3f}
 @media (max-width:900px){.contact-2{grid-template-columns:1fr;gap:32px}}
 
+/* v11 hero with audience + outcomes */
+.hero-3{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start}
+.hero-3 h1{margin:18px 0 20px}
+.hero-3 .lede{max-width:54ch}
+.hero-3 .lede.strong{color:#fff;margin-top:14px}
+.hero-3 .ctas{margin-top:30px}
+.h-right{border-left:1px solid var(--line-dark);padding-left:44px;display:grid;gap:14px}
+.h-k{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-family:var(--body)}
+.h-list,.h-out{list-style:none;padding:0;margin:0 0 10px;display:grid;gap:9px}
+.h-list li,.h-out li{display:grid;grid-template-columns:20px 1fr;gap:10px;font-size:15.5px;line-height:1.5;color:var(--silver)}
+.h-list li::before{content:"";width:9px;height:9px;border:2px solid var(--gold);transform:rotate(45deg);margin-top:7px}
+.h-out li::before{content:"→";color:var(--gold);font-weight:700}
+.h-now{background:var(--navy-2);border-left:3px solid var(--gold);padding:16px 18px;margin:0 0 10px;display:grid;gap:8px}
+.h-now p{font-size:15px;color:var(--muted-dark)}
+.h-now b{color:var(--gold-soft);font-weight:600}
+@media (max-width:960px){.hero-3{grid-template-columns:1fr;gap:40px}.h-right{border-left:0;padding-left:0;border-top:1px solid var(--line-dark);padding-top:32px}}
+
+.diag-sec{background:var(--white)}
+.diag-2{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.diag-2 .go{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:26px}
+.diag-2 .go .textlink{color:var(--ink)}
+.d-list{list-style:none;padding:0;margin:0;border-top:2px solid var(--ink)}
+.d-list li{display:grid;grid-template-columns:40px 1fr;padding:15px 0;border-bottom:1px solid var(--rule);font-size:16.5px}
+.d-list li span{font-family:var(--display);font-size:26px;color:var(--gold);font-weight:600;line-height:1}
+@media (max-width:900px){.diag-2{grid-template-columns:1fr;gap:32px}}
+
 /* v7 */
 .offers2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:56px;max-width:760px}
 .freepack{margin-top:16px;max-width:760px;font-size:14.5px;color:#d3cfc6;display:flex;gap:10px;align-items:center}
@@ -602,32 +628,65 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
 
 <main id="top">
 
-<!-- 1. HERO + DIAGNOSTIC -->
+<!-- 1. HERO -->
 <section class="hero">
-  <div class="wrap hero-2">
-    <div>
+  <div class="wrap hero-3">
+    <div class="h-left">
       <div class="eyebrow">For professionals</div>
       <h1>You have done everything right. Why does it still feel like this?</h1>
-      <p class="lede">Life is not going the way you planned. A career crisis, then your health, your family and your money, all at once. You change jobs, plans or relationships, and the same problems are waiting.</p>
+      <p class="lede">Life is not going the way you planned. A career crisis, then your health, your family and your money, all at once. You replay the same worries. You change jobs, plans or relationships, and the same problems are waiting.</p>
       <p class="lede strong">Fear starts making your decisions. You need a clear mind for your next move.</p>
-      <p class="hook">Success does not break the loop. It raises the price.</p>
+      <div class="ctas">
+        <a class="btn btn-gold btn-lg" href="#diagnostic">Start with the free diagnostic <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <p class="micro meta">Free · about 8 minutes · see where the loop is holding you</p>
     </div>
-    <aside class="hcard" id="diagnostic" aria-label="The Invisible Loop Diagnostic">
-      <span class="eyebrow">Free · 8 minutes</span>
-      <h2>The Invisible Loop Diagnostic</h2>
-      <ul aria-label="In eight minutes, you will see">
-        <li><span>1</span>The pattern running your loop</li>
-        <li><span>2</span>The old identity behind it, and the new one to choose</li>
-        <li><span>3</span>What it is costing you, in time, money and the people around you</li>
-        <li><span>4</span>Three ways to start breaking your loop this week</li>
+    <div class="h-right">
+      <h2 class="h-k">This is for you if</h2>
+      <ul class="h-list">
+        <li>You want a clear, calm mind to make your next big decision</li>
+        <li>You lie awake replaying the same worries, and the morning brings no answer</li>
+        <li>You are tired of fear choosing your next job, plan or relationship</li>
+        <li>On paper you are doing well, but inside you feel stuck</li>
+        <li>You know you deserve more, and you are done settling for less</li>
       </ul>
-      <a class="btn btn-gold btn-lg" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Start the diagnostic <span class="arrow" aria-hidden="true">→</span></a>
-      <a class="textlink" href="#" data-open="dgmodal">Prefer paper? Download the printable</a>
-    </aside>
+      <div class="h-now">
+        <h2 class="h-k">Now, or before it gets worse</h2>
+        <p>Maybe the crisis is already here. Maybe you can feel it building. Either way, the loop does not fix itself. <b>Success does not break the loop. It raises the price,</b> and the bill lands on your career, your health, your money and the people who rely on you.</p>
+      </div>
+      <h2 class="h-k">What changes</h2>
+      <ul class="h-out">
+        <li>You see the old belief that has been making your decisions</li>
+        <li>You make your next move from clarity, not fear</li>
+        <li>The same problem stops finding you in every new setting</li>
+        <li>You ask for what you are worth, and walk into rooms you have earned</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<!-- 2. THE PROBLEM -->
+<!-- 2. DIAGNOSTIC -->
+<section class="section tight diag-sec" id="diagnostic">
+  <div class="wrap diag-2">
+    <div>
+      <div class="eyebrow">Start here · Free · 8 minutes</div>
+      <h2 class="h2">The Invisible Loop Diagnostic</h2>
+      <p class="lead">See where the loop is holding you, before you try another strategy.</p>
+      <div class="go">
+        <a class="btn btn-gold btn-lg" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Start the diagnostic <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="textlink" href="#" data-open="dgmodal">Prefer paper? Download the printable</a>
+      </div>
+    </div>
+    <ul class="d-list" aria-label="In eight minutes, you will see">
+      <li><span>1</span>The pattern running your loop</li>
+      <li><span>2</span>The old identity behind it, and the new one to choose</li>
+      <li><span>3</span>What it is costing you, in time, money and the people around you</li>
+      <li><span>4</span>Three ways to start breaking your loop this week</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3. THE PROBLEM -->
 <section class="section tight" id="problem">
   <div class="wrap problem-2">
     <div>
