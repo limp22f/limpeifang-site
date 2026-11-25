@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lim Pei Fang · The Invisible Loop</title>
-<meta name="description" content="You have outgrown the beliefs that got you here, but they are still making your decisions. Take the free Invisible Loop Diagnostic, get the book, join the workshop.">
+<title>Lim Pei Fang | The Invisible Loop</title>
+<meta name="description" content="For professionals and business owners who have done everything right and still feel stuck. Take the free diagnostic, read The Invisible Loop, or register interest in a programme.">
 <link rel="canonical" href="https://limpeifang.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Lim Pei Fang · Inner Channel">
 <meta property="og:url" content="https://limpeifang.com/">
-<meta property="og:title" content="Lim Pei Fang · The Invisible Loop">
-<meta property="og:description" content="You have outgrown the beliefs that got you here. They are still making your decisions. Take the free 8-minute diagnostic, get the book, or book a free call.">
+<meta property="og:title" content="Lim Pei Fang | The Invisible Loop">
+<meta property="og:description" content="For professionals and business owners who have done everything right and still feel stuck. Take the free diagnostic, read The Invisible Loop, or register interest in a programme.">
 <meta property="og:image" content="https://limpeifang.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
@@ -470,6 +470,23 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
 .gallery-wide img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
 @media (max-width:860px){.nl-grid{grid-template-columns:1fr;gap:28px}.gallery-wide{height:200px}}
 
+/* v8 programmes */
+.programmes{background:#e9e5da}
+.progs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;align-items:stretch}
+.prog{background:var(--white);border:1px solid var(--rule);border-top:3px solid var(--navy);padding:30px 26px 26px;display:flex;flex-direction:column;gap:12px;position:relative}
+.prog.pick{border-color:var(--gold);border-top-color:var(--gold);box-shadow:0 24px 50px -30px rgba(10,15,28,.45)}
+.prog .tag{position:absolute;top:-13px;left:24px;background:var(--gold);color:var(--navy);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px}
+.prog .k{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.prog h3{font-family:var(--display);font-size:30px;font-weight:600;line-height:1.08}
+.prog p{font-size:15.5px;color:var(--muted)}
+.prog .det{margin-top:auto;padding-top:14px;border-top:1px solid var(--rule);font-size:14px;font-weight:600;color:var(--ink)}
+.prog .btn{width:100%}
+.prog .btn-line{color:var(--navy)}
+@media (max-width:900px){.progs{grid-template-columns:1fr;gap:28px}}
+.field textarea{font:16px var(--body);padding:12px 14px;border:1px solid #c9ccd3;border-radius:2px;resize:vertical;width:100%}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:4px 0 16px;cursor:pointer}
+.consent input{margin-top:4px;accent-color:var(--navy)}
+
 /* v7 */
 .offers2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:56px;max-width:760px}
 .freepack{margin-top:16px;max-width:760px;font-size:14.5px;color:#d3cfc6;display:flex;gap:10px;align-items:center}
@@ -497,8 +514,8 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
       <ul>
         <li><a href="#diagnostic">Diagnostic</a></li>
         <li><a href="#book">The Book</a></li>
+        <li><a href="#programmes">Programmes</a></li>
         <li><a href="#speaking">Speaking</a></li>
-        <li><a href="#workshop">Workshop</a></li>
         <li><a href="#coaching">Discovery call</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -517,13 +534,13 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <div class="eyebrow">For high achievers who look fine and feel stuck</div>
-        <h1>You have outgrown the beliefs that got you here. They are still making your decisions.</h1>
-        <p class="hook">Success does not break the loop. It raises the price.</p>
-        <p class="lede">Most high achievers do not plateau because they lack discipline, drive or strategy. They plateau because an old pattern tied to their identity pulls them back, however hard they push.</p>
+        <div class="eyebrow">For professionals and business owners, late 30s to early 50s</div>
+        <h1>You have done everything right. Why does it still feel like this?</h1>
+        <p class="lede">The restructuring. The business that stopped growing. Then the health, the family and the money, all at once. Fear starts making your decisions. I help you clear it and make your next move with a clear mind.</p>
+        <p class="hook" style="margin:16px 0 0">Success does not break the loop. It raises the price.</p>
         <div class="ctas">
           <a class="btn btn-gold btn-lg" href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Take the free diagnostic <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-line" href="#book">Get the book</a>
+          <a class="btn btn-line" href="#programmes">See the programmes <span class="arrow" aria-hidden="true">→</span></a>
         </div>
         <p class="micro meta">Free · about 8 minutes</p>
       </div>
@@ -540,8 +557,10 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
     <div class="problem-grid">
       <div>
         <div class="eyebrow">The problem</div>
-        <h2 class="h2" style="margin-top:14px">It is not your strategy. It is an old belief, still deciding for you.</h2>
-        <p class="lead">Capable people hit a ceiling they cannot strategise past. Under pressure, a belief learned in harder times takes over, and the bill lands on your career, your health, your money and the people who rely on you.</p>
+        <h2 class="h2" style="margin-top:14px">It rarely arrives as one thing. It arrives as a stack.</h2>
+        <p class="lead">You gave it everything. The years, the late nights, the results. Then the role was restructured, or the business stopped working, and everything else seemed to follow. Your health. Your relationships. Your money.</p>
+        <p class="lead" style="margin-top:14px">Under that pressure, an old belief takes over. It says you are not enough, that you must grab the first option, that there is no way out. You make decisions with a mind full of fear, and the same problem finds you again in the next job, the next venture or the next relationship.</p>
+        <p class="lead" style="margin-top:14px">I call this a loop. You cannot see it, so you blame the market, the people or bad timing.</p>
       </div>
       <ul class="signs" aria-label="Three signs a loop is costing you">
         <li><span class="n">1</span><div><h3>It repeats</h3><p>The third time, with different people or in a different setting.</p></div></li>
@@ -607,13 +626,49 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
   </div>
 </section>
 
-<!-- 4. SPEAKING -->
+<!-- 4. PROGRAMMES -->
+<section class="section programmes" id="programmes">
+  <div class="wrap">
+    <div style="max-width:720px">
+      <div class="eyebrow">Programmes</div>
+      <h2 class="h2" style="margin:14px 0 16px">Ways to work with me</h2>
+      <p class="lead">All three use I CLEAR, the six-step method from The Invisible Loop. They open in 2027. Register your interest and you will hear first, with a founding price.</p>
+    </div>
+    <div class="progs">
+      <article class="prog pick">
+        <span class="tag">Founding places</span>
+        <span class="k">1:1 programme</span>
+        <h3>Clear Mind, Next Move</h3>
+        <p>For professionals and business owners after a career or business setback, or when several things have hit at once.</p>
+        <p>You find the old belief that took over, clear it, and make your next move from clarity, not fear.</p>
+        <p class="det">1:1 · [number] weeks · 4 founding places</p>
+        <button class="btn btn-navy" data-prog="clear-mind">Apply for a founding place <span class="arrow" aria-hidden="true">→</span></button>
+      </article>
+      <article class="prog">
+        <span class="k">Live workshop</span>
+        <h3>When It All Hits at Once</h3>
+        <p>A guided session in Singapore and online. See your loop in action, find the belief underneath it, and leave with one decision to act on that week.</p>
+        <p class="det">Half day [confirm] · Singapore and online · limited seats</p>
+        <button class="btn btn-line" data-prog="all-at-once">Get first access <span class="arrow" aria-hidden="true">→</span></button>
+      </article>
+      <article class="prog">
+        <span class="k">For teams and organisations</span>
+        <h3>Who You Are Without the Title</h3>
+        <p>A workshop or talk for HR, L&amp;D and leadership teams supporting people through a restructuring or a step up.</p>
+        <p class="det">In-house · Singapore and online</p>
+        <button class="btn btn-line" data-prog="without-title">Enquire for your team <span class="arrow" aria-hidden="true">→</span></button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5. SPEAKING -->
 <section class="section dark" id="speaking">
   <div class="wrap">
     <div style="max-width:720px;margin-bottom:44px">
       <div class="eyebrow">Speaking</div>
-      <h2 class="h2" style="color:#fff;margin:14px 0 16px">Keynotes and workshops for teams under pressure</h2>
-      <p class="lead">For conferences, leadership programmes, and HR and learning and development teams supporting people through restructuring or a step up.</p>
+      <h2 class="h2" style="color:#fff;margin:14px 0 16px">Talks for people and teams going through change</h2>
+      <p class="lead">For conferences, leadership programmes, and HR and L&amp;D teams supporting people through a restructuring or a step up.</p>
     </div>
     <div class="speak">
       <div>
@@ -625,10 +680,10 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
       </div>
       <div>
         <ul class="topics" aria-label="Talks">
-          <li><b>Success does not break the loop</b><span>Why the pattern gets louder after the promotion, the raise or the exit.</span></li>
-          <li><b>Who you are without the title</b><span>Identity, restructuring and starting again.</span></li>
-          <li><b>What the loop costs a team</b><span>Why capable teams repeat the same patterns, and what it costs the business.</span></li>
-          <li><b>Energy work for high performers</b><span>Managing your energy, not only your time, and clearing what drains it.</span></li>
+          <li><b>Who you are without the title</b><span>Also offered as the team workshop in <a href="#programmes" style="color:var(--gold-soft)">Programmes</a>.</span></li>
+          <li><b>Success does not break the loop. It raises the price.</b><span>Why the pattern gets louder after the promotion, the raise or the exit.</span></li>
+          <li><b>What a loop costs a team after a restructuring</b><span>Why capable teams repeat the same patterns, and what it costs the business.</span></li>
+          <li><b>Deciding clearly when it all hits at once</b></li>
         </ul>
         <div class="proof">
           <span><b>Volunteer</b> at the Centre for Inner Studies, Singapore, including workshop speaker at One Impact Week</span>
@@ -641,56 +696,18 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
   </div>
 </section>
 
-<!-- 5. WORKSHOP -->
-<section class="section" id="workshop">
-  <div class="wrap ws-grid">
-    <div>
-      <span class="pill">Interest list open</span>
-      <h2 class="h2" style="margin:20px 0 18px">The Invisible Loop Workshop</h2>
-      <p class="lead">Reading about your loop is one thing. Working on it in a room with people who carry the same pattern is another. A live, guided session to find your loop and start breaking it.</p>
-      <div class="ws-facts">
-        <div><b>Live</b>Guided by Pei Fang</div>
-        <div><b>Singapore and online</b>Tell us which you prefer</div>
-        <div><b>Dates to be announced</b>Interest list hears first</div>
-      </div>
-      <ul class="outcomes">
-        <li>See your loop in action, in your own words</li>
-        <li>Find the belief underneath it and test whether it still holds</li>
-        <li>Leave with one decision you will act on that same week</li>
-      </ul>
-    </div>
-    <div class="formcard">
-      <h3>Register your interest</h3>
-      <p>No payment now. You get first notice of dates and first claim on seats.</p>
-      <form id="ws-form" novalidate>
-        <div class="field"><label for="ws-name">Name</label><input id="ws-name" name="name" autocomplete="name" required></div>
-        <div class="field"><label for="ws-email">Email</label><input id="ws-email" name="email" type="email" autocomplete="email" required></div>
-        <fieldset class="field"><legend>I would prefer</legend>
-          <div class="chips">
-            <label><input type="radio" name="format" value="Singapore, in person" checked> In person, Singapore</label>
-            <label><input type="radio" name="format" value="Online"> Online</label>
-            <label><input type="radio" name="format" value="Either"> Either</label>
-          </div>
-        </fieldset>
-        <button class="btn btn-navy" style="width:100%" type="submit">Secure my place on the list <span class="arrow" aria-hidden="true">→</span></button>
-      </form>
-      <div class="done" id="ws-done" role="status"></div>
-    </div>
-  </div>
-</section>
-
 <!-- 6. DISCOVERY CALL -->
 <section class="section" id="coaching" style="background:#e4e7ec">
   <div class="wrap coach1">
     <div>
       <div class="eyebrow">Discovery call</div>
-      <h2 class="h2" style="margin:14px 0 18px">Talk it through, free</h2>
-      <p class="lead">For people who are ready to change the pattern, not only understand it. On a 30-minute call we look at the problem that keeps repeating, find which part of the loop is driving it, and agree the right next step for you.</p>
+      <h2 class="h2" style="margin:14px 0 18px">First, let's see what it is costing you</h2>
+      <p class="lead">30 minutes, free. We look at your diagnostic, what the loop is costing you in money, health and the people around you, and what the right next step is. If the book alone is enough, I will tell you.</p>
       <ul class="checks">
-        <li>You run a business and cannot switch off</li>
-        <li>The same pattern costs more with every step up</li>
-        <li>Your role has been restructured, and the old identity followed you</li>
-        <li>You are carrying a career, ageing parents and a household at once</li>
+        <li>Your role was restructured, or it might be</li>
+        <li>Your business is not doing as well as it should, and you cannot switch off</li>
+        <li>Several things have gone wrong at once, and fear is making your decisions</li>
+        <li>You have done everything right and still feel not enough</li>
       </ul>
     </div>
     <aside class="panel" aria-label="Book a discovery call">
@@ -710,13 +727,15 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
       <div class="eyebrow">About</div>
       <h2 class="h2" style="margin:14px 0 22px">Lim Pei Fang</h2>
       <div class="story">
-        <p class="first">She spent close to twenty years in mergers and acquisitions, deal structuring and investing. For a long time it was the only identity she had.</p>
+        <p class="first"><b>The hardest deal I ever closed was the one with myself.</b></p>
+        <p>She spent close to twenty years in mergers and acquisitions, deal structuring and investing. For a long time it was the only identity she had.</p>
         <p>When a 2021 restructuring put her role at risk in the same year Covid-19 hit her family hard, that identity began to slip away, and for the first time she felt completely helpless. She calls what followed the hardest deal she ever had to close, the one with herself.</p>
         <p>Out of that turning point she founded Inner Channel and developed I CLEAR, the six-step method in The Invisible Loop. She does not coach from outside the pressure her clients carry. She lived inside it for close to twenty years. Corporate life does not reward good intentions. It rewards results you can point to, and that is the standard she holds her work to today.</p>
-        <p>Pei Fang is a coach, mentor and licensed NLP Practitioner based in Singapore. She also practises energy work through Pranic Healing, and Chinese Metaphysics. She shares her story openly so you can see that yours can change too.</p>
+        <p>She shares her story openly so you can see that yours can change too.</p>
+        <p>Pei Fang is a coach, mentor and licensed NLP Practitioner based in Singapore, with close to twenty years in mergers and acquisitions, deal structuring and investing. She also practises energy work through Pranic Healing, and Chinese Metaphysics.</p>
       </div>
       <div class="quals" aria-label="Background">
-        <span>Licensed NLP Practitioner</span><span>Coach and mentor</span><span>Energy work (Pranic Healing)</span><span>Volunteer, Centre for Inner Studies</span>
+        <span>Licensed NLP Practitioner</span><span>Coach and mentor</span><span>Volunteer, Centre for Inner Studies</span><span>Energy work (Pranic Healing)</span>
       </div>
     </div>
   </div>
@@ -820,6 +839,48 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
   </div>
 </div>
 
+<!-- PROGRAMME INTEREST -->
+<div class="overlay" id="pgmodal" role="dialog" aria-modal="true" aria-labelledby="pg-title">
+  <div class="sheet" style="max-width:560px">
+    <div class="sheet-head"><b id="pg-title">Register your interest</b><button class="x" data-close aria-label="Close">×</button></div>
+    <div class="sheet-body">
+      <form id="pg-form" novalidate>
+        <div class="field"><label for="pg-name">Name</label><input id="pg-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="pg-email">Email</label><input id="pg-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="pg-prog">Programme</label>
+          <select id="pg-prog" name="programme">
+            <option value="clear-mind">Clear Mind, Next Move</option>
+            <option value="all-at-once">When It All Hits at Once</option>
+            <option value="without-title">Who You Are Without the Title (for teams)</option>
+          </select>
+        </div>
+        <div class="field"><label for="pg-fit">Which fits you best?</label>
+          <select id="pg-fit" name="situation">
+            <option>My role was restructured or is at risk</option>
+            <option>My business is not doing well</option>
+            <option>Several things have hit at once</option>
+            <option>I am enquiring for my organisation</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <fieldset class="field" id="pg-format" hidden><legend>For the workshop, I would prefer</legend>
+          <div class="chips">
+            <label><input type="radio" name="format" value="In person" checked> In person</label>
+            <label><input type="radio" name="format" value="Online"> Online</label>
+            <label><input type="radio" name="format" value="Either"> Either</label>
+          </div>
+        </fieldset>
+        <div class="field"><label for="pg-msg">In one or two sentences, what is happening right now? <span style="font-weight:400;color:var(--muted)">(optional)</span></label><textarea id="pg-msg" name="message" rows="3"></textarea></div>
+        <label class="consent"><input type="checkbox" id="pg-consent" name="consent" required> I agree to Inner Channel contacting me about this programme. My details stay private and are never shared.</label>
+        <button class="btn btn-navy" style="width:100%" type="submit">Send <span class="arrow" aria-hidden="true">→</span></button>
+        <p class="formnote">No payment now. Only Pei Fang sees what you send.</p>
+        <p class="formnote" style="margin-top:6px">Your details are used only to contact you about this programme. Write to pf@limpeifang.com to have them removed.</p>
+      </form>
+      <div class="done" id="pg-done" role="status"></div>
+    </div>
+  </div>
+</div>
+
 <!-- CHECKOUT -->
 <div class="overlay" id="checkout" role="dialog" aria-modal="true" aria-labelledby="co-title">
   <div class="sheet" style="max-width:520px">
@@ -916,13 +977,24 @@ function gate(formSel,dlSel,type,render){
 gate("#dg-form","#dg-dl","diagnostic_printable",n=>`<p style="font-size:15px;margin-bottom:4px">Thank you, ${n}.</p>`+row(L.diag,"The Invisible Loop Diagnostic","all")+`<p style="font-size:13.5px;color:var(--muted);margin-top:8px">Prefer it scored for you? <a href="https://loop.limpeifang.com/" target="_blank" rel="noopener">Take it online</a>.</p>`);
 gate("#pack-form","#pack-dl","pack_claim",n=>`<p style="font-size:15px;margin-bottom:4px">Thank you, ${n}.</p>`+row(L.all,"All 8 worksheets in one file","all")+`<p style="font-size:13px;color:var(--muted);margin:8px 0 2px">Or only the chapters you need</p><div class="chpick">`+SHEETS.map(([id,t])=>row(L[id],t)).join("")+`</div>`);
 
-/* workshop */
-$("#ws-form").addEventListener("submit",async e=>{
-  e.preventDefault();const f=e.target,el=f.elements,d=$("#ws-done");
+/* programmes: one private interest form, programme pre-selected */
+const PROGS={"clear-mind":"Clear Mind, Next Move","all-at-once":"When It All Hits at Once","without-title":"Who You Are Without the Title (for teams)"};
+const pgSel=$("#pg-prog"),pgFmt=$("#pg-format");
+const syncFmt=()=>{pgFmt.hidden=pgSel.value!=="all-at-once"};
+pgSel.addEventListener("change",syncFmt);
+$$("[data-prog]").forEach(b=>b.addEventListener("click",()=>{
+  pgSel.value=b.dataset.prog;syncFmt();
+  $("#pg-form").hidden=false;$("#pg-done").classList.remove("show");openOv("pgmodal");
+}));
+$("#pg-form").addEventListener("submit",async e=>{
+  e.preventDefault();const f=e.target,el=f.elements,d=$("#pg-done");
   const name=el["name"].value.trim(),em=el["email"].value.trim();
   if(!name||!validEmail(em)){d.textContent="Please add your name and a valid email.";d.classList.add("show");return}
-  await sendLead("workshop_interest",{name,email:em,format:el["format"].value});
-  f.hidden=true;d.innerHTML=`You are on the list, ${name}. You will hear about dates before anyone else.`;d.classList.add("show");
+  if(!el["consent"].checked){d.textContent="Please tick the consent box so I can contact you.";d.classList.add("show");return}
+  const prog=pgSel.value;
+  await sendLead("programme_interest",{programme:PROGS[prog],name,email:em,situation:el["situation"].value,
+    format:prog==="all-at-once"?el["format"].value:"",message:el["message"].value.trim(),consent:"yes"});
+  f.hidden=true;d.innerHTML=`Thank you. I read every message myself and will reply within 2 working days. In the meantime, <a href="https://loop.limpeifang.com/" target="_blank" rel="noopener">take the diagnostic</a> if you have not yet.`;d.classList.add("show");
 });
 
 /* contact */
