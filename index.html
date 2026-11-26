@@ -594,6 +594,12 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
 #contact .formcard{box-shadow:none;border:1px solid var(--rule)}
 
 .pivot{margin-top:18px;color:#fff;font-size:clamp(20px,2vw,24px);font-weight:600;line-height:1.35}
+/* v14 equal photos, aligned with the three talks */
+.tphotos{grid-template-columns:repeat(3,1fr);gap:12px}
+.tphotos figure{height:260px}
+.tphotos figure:nth-child(1) img,.tphotos figure:nth-child(2) img{object-position:50% 15%}
+.tphotos figure:nth-child(3) img{object-position:50% 45%}
+@media (max-width:900px){.tphotos{grid-template-columns:repeat(3,1fr);gap:8px}.tphotos figure:first-child{grid-column:auto}.tphotos figure{height:150px}}
 /* v7 */
 .offers2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:56px;max-width:760px}
 .freepack{margin-top:16px;max-width:760px;font-size:14.5px;color:#d3cfc6;display:flex;gap:10px;align-items:center}
@@ -736,9 +742,9 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
       <li><b>Running on Empty</b><span>An energy reset using meditation and Pranic Healing to clear inherited stress and the unresolved patterns that keep repeating.</span></li>
     </ul>
     <div class="tphotos">
-      <figure><img src="assets/speak-room.jpg" alt="Pei Fang speaking to a full room at the Centre for Inner Studies, Singapore" loading="lazy"></figure>
       <figure><img src="assets/speak-1.jpg" alt="Pei Fang speaking on stage" loading="lazy"></figure>
       <figure><img src="assets/speak-3.jpg" alt="Pei Fang leading an audience exercise" loading="lazy"></figure>
+      <figure><img src="assets/speak-room.jpg" alt="Pei Fang speaking to a full room at the Centre for Inner Studies, Singapore" loading="lazy"></figure>
     </div>
     <div class="sp-foot">
       <span><b>Speaking &amp; Community</b> · Centre for Inner Studies Singapore (One Impact Week) · APSS · Toastmasters</span>
