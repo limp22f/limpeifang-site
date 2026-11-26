@@ -693,16 +693,15 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
         </div>
         <div class="offers2" id="buy">
           <article class="offer">
-            <span class="k">Instant download</span>
+            <span class="k">Kindle eBook</span>
             <h3>eBook</h3>
-            <div class="price" data-price="ebook"></div>
-            <button class="btn btn-ember" data-checkout="ebook">Buy the eBook <span class="arrow" aria-hidden="true">→</span></button>
+            <div class="price">Available now on Amazon</div>
+            <a class="btn btn-ember" href="https://www.amazon.com/dp/B0HH9V6NQ8" target="_blank" rel="noopener">Buy on Amazon <span class="arrow" aria-hidden="true">→</span></a>
           </article>
           <article class="offer">
-            <span class="k">Listen on the move</span>
-            <h3>Audiobook</h3>
-            <div class="price" data-price="audiobook"></div>
-            <button class="btn btn-ember" data-checkout="audiobook">Buy the audiobook <span class="arrow" aria-hidden="true">→</span></button>
+            <span class="k">Print</span>
+            <h3>Paperback</h3>
+            <div class="price">Coming soon</div>
           </article>
         </div>
         <p class="freepack">Every copy comes with the free chapter worksheets.</p>
@@ -909,10 +908,10 @@ footer{background:#070b15;color:var(--muted-dark);font-size:13.5px;padding:48px 
 const CONFIG = {
   currency: "S$",
   // Prices as numbers, e.g. 24.90. Leave null to show "Price announced at launch".
-  prices: { ebook:null, audiobook:null },
+  prices: { ebook:null },
   // Payhip checkout link for each format.
   // Leave "" and the button takes a free pre-order instead.
-  payLinks: { ebook:"", audiobook:"" },
+  payLinks: { ebook:"" },
   // Exercise Pack PDF links: one file with all 8, plus one per chapter.
   packLinks: { diag:"downloads/The-Invisible-Loop-Diagnostic-Printable.pdf", all:"downloads/The-Invisible-Loop-Exercise-Pack-All-8.pdf",
     ch1:"downloads/Ch1-facts-or-story.pdf", ch2:"downloads/Ch2-hidden-cost-check.pdf", ch3:"downloads/Ch3-identity-wardrobe.pdf",
@@ -926,7 +925,7 @@ const CONFIG = {
 };
 
 const SHEETS=[["ch1","Ch 1 · Your Loop, Facts or Story?"],["ch2","Ch 2 · The Hidden Cost Check"],["ch3","Ch 3 · Your Identity Wardrobe"],["ch4","Ch 4 · The Confront Journal"],["ch5","Ch 5 · The Let Go Ledger"],["ch6","Ch 6 · The Enlist Card"],["ch7","Ch 7 · The Loop Tracker"],["ch8","Ch 8 · Your Rise Plan"]];
-const FMT={ebook:"eBook",audiobook:"Audiobook"};
+const FMT={ebook:"eBook"};
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const money=n=>n==null?"":CONFIG.currency+(Number.isInteger(n)?n:n.toFixed(2));
 const validEmail=v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
